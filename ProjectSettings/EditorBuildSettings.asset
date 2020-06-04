@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ARpractice.unity
+    guid: 86c1d8afcd8d35440aa03127444ebe15
+  m_configObjects:
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 42879b27fa8b27044bf3109f94c41127,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0610781312a83dd4e9e9f2113a017e42,
+      type: 2}
