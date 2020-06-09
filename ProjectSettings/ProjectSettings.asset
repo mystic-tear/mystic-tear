@@ -715,10 +715,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: d2bdaa75-5706-4d61-a79d-f7b74ce9892d
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: mystictear
+  organizationId: rogerrogerv
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
