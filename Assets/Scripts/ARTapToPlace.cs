@@ -8,9 +8,15 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARTapToPlace : MonoBehaviour
 {
-    public GameObject gameObjectToInstantiate;
+    [SerializeField]
+    private GameObject gameObjectToInstantiate;
 
     private GameObject spawnedObject;
+
+    [SerializeField]
+    private int maxAllowableCreatures;
+    private int spawnedCreaturesCount;
+    private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
     private Vector2 touchPosition;
 
@@ -26,7 +32,7 @@ public class ARTapToPlace : MonoBehaviour
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
     {
-        if(Input.touchCount > 0)
+        if(Input.GetTouch(0).phase == TouchPhase.Began)
         {
             touchPosition = Input.GetTouch(0).position;
             return true;
@@ -44,15 +50,23 @@ public class ARTapToPlace : MonoBehaviour
         if(_arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
             var hitPose = hits[0].pose;
-
-            if(spawnedObject == null)
+            if(spawnedCreaturesCount < maxAllowableCreatures)
             {
-                spawnedObject = Instantiate(gameObjectToInstantiate, hitPose.position, hitPose.rotation);
+                spawnCreature(hitPose);
             }
-            else
-            {
-                spawnedObject.transform.position = hitPose.position;
-            }
+            //spawnedObject.transform.position = hitPose.position;
         }
+    }
+
+    public void SetGameObjectToSpawn(GameObject gameObject)
+    {
+        gameObjectToInstantiate = gameObject;
+    }
+
+    private void spawnCreature(Pose hitPose)
+    {
+        spawnedObject = Instantiate(gameObjectToInstantiate, hitPose.position, hitPose.rotation);
+        placedGameObjectsList.Add(spawnedObject);
+        spawnedCreaturesCount++;
     }
 }
