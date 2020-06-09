@@ -15,29 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/ClickedCreatureScene.unity
     guid: 7437a4cca2a43439e8c62d59b7bf5538
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/ARSingle.unity
-    guid: ca2c2f521951b45829e80959ceda8da9
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/ARSingle.unity
-    guid: ca2c2f521951b45829e80959ceda8da9
-  - enabled: 1
     path: Assets/Scenes/ARMain.unity
     guid: be341c49146864a96996f0cd50997a46
+  - enabled: 0
+    path: Assets/Scenes/ARSingle.unity
+    guid: ca2c2f521951b45829e80959ceda8da9
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 42879b27fa8b27044bf3109f94c41127,
       type: 2}
