@@ -2,14 +2,11 @@ version: 2
 importPivots: 1
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/sprites/humanwitchidle.tpsheet
 - Assets/Sprites/humanwitchidle.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
-- Assets/sprites/humanwitchidle.png
 - Assets/Sprites/humanwitchidle.png
 normalmapFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
-- 
 - 
 enableDebugOutput: 0
