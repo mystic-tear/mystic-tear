@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ARSingle.unity
     guid: ca2c2f521951b45829e80959ceda8da9
+  - enabled: 0
+    path: Assets/Scenes/kohki.unity
+    guid: dee1cc26057c4994f9b3aa1adf6fc574
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 42879b27fa8b27044bf3109f94c41127,
       type: 2}
