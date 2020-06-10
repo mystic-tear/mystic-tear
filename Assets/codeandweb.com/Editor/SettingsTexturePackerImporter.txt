@@ -1,9 +1,19 @@
 version: 2
 importPivots: 1
 tpsheetFileNames:
+<<<<<<< HEAD
+=======
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+>>>>>>> 694b7dc... all 5 sprites are in gallery and have clickedCreatureScenes
 - Assets/Sprites/humanwitchidle.tpsheet
+- Assets/sprites/humanwitchidle.tpsheet
 textureFileNames:
+<<<<<<< HEAD
+=======
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+>>>>>>> 694b7dc... all 5 sprites are in gallery and have clickedCreatureScenes
 - Assets/Sprites/humanwitchidle.png
+- Assets/sprites/humanwitchidle.png
 normalmapFileNames:
 - 
 enableDebugOutput: 0
