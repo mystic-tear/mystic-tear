@@ -5,51 +5,33 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TitleScene.unity
     guid: 3ea0dcf7e8d9f42599d24f1c55b02257
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GalleryScene.unity
     guid: ff9e67e12636a4b9a89b7bec473785f2
-<<<<<<< HEAD
-  - enabled: 0
-    path: Assets/Scenes/ClickedCreatureScene.unity
-=======
+  - enabled: 1
+    path: Assets/Scenes/ClickedCreatureSceneBorbHealer.unity
+    guid: 440224b4a3fe9474f89fd01d1326abd9
+  - enabled: 1
+    path: Assets/Scenes/ClickedCreatureSceneDwarfBard.unity
+    guid: a7d5be54ce2f2419eb000ea6ac41f969
+  - enabled: 1
+    path: Assets/Scenes/ClickedCreatureSceneElfRanger.unity
+    guid: 01f90c5ef1a244e759ebef5249fc20d2
   - enabled: 1
     path: Assets/Scenes/ClickedCreatureSceneHumanWitch.unity
->>>>>>> 5ed7d85a353e5aa41b5057af6d02220dfa367c55
     guid: 7437a4cca2a43439e8c62d59b7bf5538
-  - enabled: 0
-    path: Assets/Scenes/ARMain.unity
-    guid: be341c49146864a96996f0cd50997a46
-  - enabled: 0
-    path: Assets/Scenes/ARSingle.unity
-    guid: ca2c2f521951b45829e80959ceda8da9
-  - enabled: 0
-<<<<<<< HEAD
-    path: Assets/Scenes/kohki.unity
-    guid: dee1cc26057c4994f9b3aa1adf6fc574
-=======
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/ARSingle.unity
-    guid: ca2c2f521951b45829e80959ceda8da9
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/ARMain.unity
-    guid: be341c49146864a96996f0cd50997a46
-=======
-    path: Assets/Scenes/ARScene.unity
-    guid: 86c1d8afcd8d35440aa03127444ebe15
   - enabled: 1
     path: Assets/Scenes/ClickedCreatureSceneOrcKnight.unity
     guid: 30653cfafe8b74b80be9870d20b82a50
   - enabled: 1
-    path: Assets/Scenes/ClickedCreatureSceneDwarfBard.unity
-    guid: a7d5be54ce2f2419eb000ea6ac41f969
->>>>>>> 5ed7d85a353e5aa41b5057af6d02220dfa367c55
->>>>>>> master
+    path: Assets/Scenes/ARSingle.unity
+    guid: ca2c2f521951b45829e80959ceda8da9
+  - enabled: 1
+    path: Assets/Scenes/ARMain.unity
+    guid: be341c49146864a96996f0cd50997a46
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 42879b27fa8b27044bf3109f94c41127,
       type: 2}
