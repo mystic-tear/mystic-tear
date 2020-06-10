@@ -54,6 +54,7 @@ public class ARTapToPlace : MonoBehaviour
             {
                 spawnCreature(hitPose);
             }
+            
             //spawnedObject.transform.position = hitPose.position;
         }
     }
