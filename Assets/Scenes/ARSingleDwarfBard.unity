@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0513857f04340c4a78eb80700b858c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 4781127925568553107, guid: d97dbbf02c9b4421b91d8fd35b02de15,
+  placedPrefab: {fileID: 345674051374950020, guid: 882bdadaee812ec44b3c731b41f712c2,
     type: 3}
   welcomePanel: {fileID: 1906447743}
   dismissButton: {fileID: 286459805}

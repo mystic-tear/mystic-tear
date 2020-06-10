@@ -207,7 +207,7 @@ MonoBehaviour:
         m_MethodName: SetGameObjectToSpawn
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 345674051374950020, guid: 882bdadaee812ec44b3c731b41f712c2,
+          m_ObjectArgument: {fileID: 8018570568325517495, guid: cf49b0969681cbc48932bb51bed4e7eb,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -643,7 +643,7 @@ Transform:
   m_GameObject: {fileID: 664492879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 605014363}
   m_Father: {fileID: 0}
@@ -776,7 +776,7 @@ MonoBehaviour:
         m_MethodName: SetGameObjectToSpawn
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3071188233947517989, guid: 2beaefb8db6f1c34fbed569e6c5e0697,
+          m_ObjectArgument: {fileID: 4545066741979965358, guid: 89c2edf644e0c0240bbbedafe51a923f,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1193,7 +1193,7 @@ MonoBehaviour:
         m_MethodName: SetGameObjectToSpawn
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5584140780590638845, guid: f0d903562e3660b4799d8c8f3228d2dd,
+          m_ObjectArgument: {fileID: 3607573612807597683, guid: 3a07351a6cd73264098fe2677150b988,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1549,7 +1549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686529788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 579.62494, y: 830.5263, z: -690.7845}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1785,7 +1785,7 @@ MonoBehaviour:
         m_MethodName: SetGameObjectToSpawn
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3218266980983708540, guid: 2b5967b06c859f446ac62f9c10cf5058,
+          m_ObjectArgument: {fileID: 1352629248768104814, guid: 1204f0b9b17864445b615824d89a6132,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1916,7 +1916,7 @@ MonoBehaviour:
         m_MethodName: SetGameObjectToSpawn
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2466031389423538774, guid: 9c8df60c10a9443479ad8b4a8714f248,
+          m_ObjectArgument: {fileID: 3083290273058103142, guid: a4c197209528ea94ab96cb28dd9ae019,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0

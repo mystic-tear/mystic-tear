@@ -1,6 +1,9 @@
 version: 2
 importPivots: 1
 tpsheetFileNames:
+- Assets/Sprites/humanwitchidle.tpsheet
 textureFileNames:
+- Assets/Sprites/humanwitchidle.png
 normalmapFileNames:
+- 
 enableDebugOutput: 0

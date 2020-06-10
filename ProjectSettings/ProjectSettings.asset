@@ -9,10 +9,10 @@ PlayerSettings:
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
   defaultScreenOrientation: 4
-  targetDevice: 2
+  targetDevice: 0
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Mystic Tear
   productName: mystic-tear
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -121,7 +121,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: .69
+  bundleVersion: 0.70
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -182,7 +182,7 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 10.0
+  iOSTargetOSVersionString: 11.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 10.0
@@ -233,8 +233,8 @@ PlayerSettings:
   tvOSManualSigningProvisioningProfileID: 
   iOSManualSigningProvisioningProfileType: 0
   tvOSManualSigningProvisioningProfileType: 0
-  appleEnableAutomaticSigning: 0
-  iOSRequireARKit: 0
+  appleEnableAutomaticSigning: 1
+  iOSRequireARKit: 1
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   clonedFromGUID: 00000000000000000000000000000000
@@ -377,7 +377,7 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: 
+  cameraUsageDescription: Required for augmented reality support.
   locationUsageDescription: 
   microphoneUsageDescription: 
   switchNetLibKey: 
@@ -601,7 +601,8 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols: {}
-  platformArchitecture: {}
+  platformArchitecture:
+    iPhone: 1
   scriptingBackend:
     Android: 1
   il2cppCompilerConfiguration: {}
@@ -674,6 +675,7 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Collab: 1
+    UNet: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
