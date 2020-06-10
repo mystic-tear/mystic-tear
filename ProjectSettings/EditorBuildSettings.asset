@@ -11,6 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GalleryScene.unity
     guid: ff9e67e12636a4b9a89b7bec473785f2
+<<<<<<< HEAD
   - enabled: 0
     path: Assets/Scenes/ClickedCreatureScene.unity
     guid: 7437a4cca2a43439e8c62d59b7bf5538
@@ -23,6 +24,20 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/kohki.unity
     guid: dee1cc26057c4994f9b3aa1adf6fc574
+=======
+  - enabled: 1
+    path: Assets/Scenes/ClickedCreatureSceneHumanWitch.unity
+    guid: 7437a4cca2a43439e8c62d59b7bf5538
+  - enabled: 1
+    path: Assets/Scenes/ARScene.unity
+    guid: 86c1d8afcd8d35440aa03127444ebe15
+  - enabled: 1
+    path: Assets/Scenes/ClickedCreatureSceneOrcKnight.unity
+    guid: 30653cfafe8b74b80be9870d20b82a50
+  - enabled: 1
+    path: Assets/Scenes/ClickedCreatureSceneDwarfBard.unity
+    guid: a7d5be54ce2f2419eb000ea6ac41f969
+>>>>>>> 694b7dc... all 5 sprites are in gallery and have clickedCreatureScenes
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 42879b27fa8b27044bf3109f94c41127,
       type: 2}
