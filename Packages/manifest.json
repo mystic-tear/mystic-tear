@@ -1,8 +1,5 @@
 {
   "dependencies": {
-    "com.google.firebase.analytics": "6.15.0",
-    "com.google.firebase.database": "6.15.0",
-    "com.google.firebase.storage": "6.15.0",
     "com.unity.2d.animation": "3.2.2",
     "com.unity.2d.pixel-perfect": "2.0.4",
     "com.unity.2d.psdimporter": "2.1.4",
@@ -18,6 +15,7 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.xr.arcore": "2.1.8",
     "com.unity.xr.arfoundation": "2.1.8",
+    "com.unity.xr.arkit-face-tracking": "1.0.7",
     "com.unity.xr.management": "3.2.10",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
