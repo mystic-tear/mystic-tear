@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:933039b02debb26dcd01cbe2e6725cc9fb0cbb6e3ba59d43b6079d3fca7961c2
-size 180
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/Sprites/humanwitchidle.tpsheet
+textureFileNames:
+- Assets/Sprites/humanwitchidle.png
+normalmapFileNames:
+- 
+enableDebugOutput: 0

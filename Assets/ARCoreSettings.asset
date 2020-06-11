@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f2ce185df5ce10c5125746507f602cdbc644911dc0282df9c7fea131ee574e0b
-size 422
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9858e958182f2e4f8dea1aa0a92e5ad, type: 3}
+  m_Name: ARCoreSettings
+  m_EditorClassIdentifier: 
+  m_Requirement: 1

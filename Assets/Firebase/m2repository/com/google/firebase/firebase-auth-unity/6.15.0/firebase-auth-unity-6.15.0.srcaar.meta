@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d077a799410d9c130729016d0568ad05c7ce8195a572881999ea68fd1cac98d8
-size 310
+fileFormatVersion: 2
+guid: 17be6ebdf0874759ba9e6cc8821c3e8e
+labels:
+- gvh
+- gvh_version-6.15.0
+- gvhp_exportpath-Firebase/m2repository/com/google/firebase/firebase-auth-unity/6.15.0/firebase-auth-unity-6.15.0.srcaar
+timeCreated: 1480838400
+DefaultImporter:
+  userData:
+  assetBundleName:
+  assetBundleVariant:

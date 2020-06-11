@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ffc3d25a267fa28992c97fd3634f526130376c93be1a6a50be20c59bbbe7da2
-size 285
+fileFormatVersion: 2
+guid: 81e43a9734ee4e3d8d85776f1b564bd3
+labels:
+- gumpr_registries
+- gvh
+- gvh_version-1.2.153
+- gvhp_exportpath-ExternalDependencyManager/Editor/GoogleRegistries.xml
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

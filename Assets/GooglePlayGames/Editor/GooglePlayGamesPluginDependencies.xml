@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0afac0cbb8d6d178743ba033aca4a9304d4ffe1244b792a89a3c47193b5d79c0
-size 457
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dependencies>
+  <!-- Internal library dependency generated at build time. 
+    It also defines the transitive dependencies on play-services
+-->
+  <androidPackages>
+    <androidPackage spec="com.google.games:gpgs-plugin-support:0.10.09">
+      <repositories>
+        <repository>Assets/GooglePlayGames/Editor/m2repository</repository>
+      </repositories>
+    </androidPackage>
+  </androidPackages>
+</dependencies>

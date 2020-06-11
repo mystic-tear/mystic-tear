@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f945872e2511c66e57b04ea8f7b9f0e1bff64ce89c43160d413b5c7246cc509b
-size 413
+<registries>
+  <!-- Registry that contains the External Dependency Manager plugin. -->
+  <registry name="Game Package Registry by Google"
+            url="https://unityregistry-pa.googleapis.com"
+            termsOfService="https://developers.google.com/terms"
+            privacyPolicy="https://policies.google.com/privacy">
+    <scopes>
+      <scope>com.google</scope>
+    </scopes>
+  </registry>
+</registries>

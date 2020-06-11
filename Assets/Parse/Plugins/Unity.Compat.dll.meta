@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ba6b797567a05650a31d1d0f4cd3eadbd47e84c2c20cb4f70743c5eff37e9eb
-size 490
+fileFormatVersion: 2
+guid: 015ef18e20f24535830f59eda9e70830
+labels:
+- gvh
+- gvh_dotnet-3.5
+- gvh_version-6.15.0
+- gvhp_exportpath-Parse/Plugins/Unity.Compat.dll
+timeCreated: 1500423342
+licenseType: Pro
+PluginImporter:
+  serializedVersion: 1
+  iconMap: {}
+  executionOrder: {}
+  isPreloaded: 0
+  platformData:
+    Any:
+      enabled: 0
+      settings: {}
+    Editor:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+  userData:
+  assetBundleName:
+  assetBundleVariant:

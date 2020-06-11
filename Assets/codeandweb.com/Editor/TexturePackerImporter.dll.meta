@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9a21f7ace36a5e4488692e191a092fad21368bdd6fe930fe88b8c3a0021ff3b1
-size 610
+fileFormatVersion: 2
+guid: 98b6c1804f4a04425b029daa48d60214
+labels:
+- Atlas
+- Mesh
+- Normal
+- Normalmap
+- Packer
+- Packing
+- Polygon
+- Sprite
+- Spritesheet
+- Texture
+- TexturePacker
+timeCreated: 1449136926
+licenseType: Store
+PluginImporter:
+  serializedVersion: 1
+  iconMap: {}
+  executionOrder: {}
+  isPreloaded: 0
+  isOverridable: 0
+  platformData:
+    Any:
+      enabled: 0
+      settings: {}
+    Editor:
+      enabled: 1
+      settings:
+        DefaultValueInitialized: true
+    WindowsStoreApps:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

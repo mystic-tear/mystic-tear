@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:528fb988a1c4a316f06cda3abcefe7649927613eebfbc97ca54b098366a39d92
-size 548
+The TexturePacker Importer script (located in Assets/codeandweb.com/Editor)
+extends your Unity editor to read sprite atlas data created with TexturePacker.
+
+It automatically detects changed or newly added spritesheets written by TexturePacker
+and (re)imports them as native Unity 2D spritesheets, so that their sprites can directly
+be used in the editor. In your TexturePacker project you have to select the data format
+"Unity - Texture2D sprite sheet".
+
+Visit our tutorial page for more information:
+https://www.codeandweb.com/texturepacker/unity

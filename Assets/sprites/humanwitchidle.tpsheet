@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3bb38f934057cbe60e6eac38a166eaae2f456cb74b0a422fb65d5431544c33b6
-size 835
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:a37d495e0d0c46e5c6c1338f5bb7dd39:6021c6fa2509ead48f4a9726020af847:06d2b0cc3a42e18720c3fe26b35a7250$
+#
+:format=40300
+:texture=humanwitchidle.png
+:size=256x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+idle1;0;0;102;128; 0.5;0.5; 0;0;0;0; 8;102;121;102;95;71;62;69;0;26;0;4;22;0;123;71;128; 6;2;6;7;2;5;6;4;5;2;4;2;3;1;2;7;0;1;7
+idle2;0;128;106;128; 0.46226415094339623;0.5; 0;0;0;0; 8;106;103;69;64;67;0;24;0;23;1;0;45;1;128;81;128; 6;1;6;7;1;5;6;1;4;5;4;1;2;4;2;3;0;1;7
+idle3;102;0;102;128; 0.5;0.5; 0;0;0;0; 8;102;121;102;95;71;62;69;0;26;0;4;22;0;123;71;128; 6;2;6;7;2;5;6;4;5;2;4;2;3;1;2;7;0;1;7

@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4f14307a5788b2f999b7574636b595a832a5cf6e5de476e3b9aca2583b33fe69
-size 242
+<metadata>
+  <groupId>com.google.firebase</groupId>
+  <artifactId>firebase-app-unity</artifactId>
+  <versioning>
+    <release>6.15.0</release>
+    <versions><version>6.15.0</version></versions>
+    <lastUpdated/>
+  </versioning>
+</metadata>
+

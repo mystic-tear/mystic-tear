@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8d34e8e59bc4b356837fd0b77649ce6dd3e7238f860fba92a022b36fd03d4d63
-size 591
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CreatureHealth : MonoBehaviour
+{
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthBar;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+}

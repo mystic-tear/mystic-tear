@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:819f2f6f8032725f83f523de4f8edd54c04c5d8b07f8fed343acfced434d279d
-size 976
+Assets/ExternalDependencyManager/Editor/CHANGELOG.md
+Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.155.dll
+Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.155.dll.mdb
+Assets/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.155.dll
+Assets/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.155.dll.mdb
+Assets/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.155.dll
+Assets/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.155.dll.mdb
+Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll
+Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.mdb
+Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.155.dll
+Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.155.dll.mdb
+Assets/ExternalDependencyManager/Editor/GoogleRegistries.xml
+Assets/ExternalDependencyManager/Editor/LICENSE
+Assets/ExternalDependencyManager/Editor/README.md
