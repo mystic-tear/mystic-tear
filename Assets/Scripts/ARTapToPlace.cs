@@ -61,12 +61,14 @@ public class ARTapToPlace : MonoBehaviour
 
     public void SetGameObjectToSpawn(GameObject gameObject)
     {
+        AndroidManager.HapticFeedback();
         gameObjectToInstantiate = gameObject;
     }
 
     private void spawnCreature(Pose hitPose)
     {
         spawnedObject = Instantiate(gameObjectToInstantiate, hitPose.position, hitPose.rotation);
+        AndroidManager.HapticFeedback();
         placedGameObjectsList.Add(spawnedObject);
         spawnedCreaturesCount++;
     }
