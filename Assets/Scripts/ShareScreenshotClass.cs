@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 public class ShareScreenshotClass : MonoBehaviour
 {
     public GameObject CanvasShareObj;
 
-    private bool isProcessing = false;
-    private bool isFocus = false;
+    [SerializeField] private bool isProcessing = false;
+    [SerializeField] private bool isFocus = false;
 
     public void ShareBtnPress()
     {
@@ -55,6 +56,7 @@ public class ShareScreenshotClass : MonoBehaviour
         isProcessing = false;
     }
 
+    [SerializeField]
     private void OnApplicationFocus(bool focus)
     {
         isFocus = focus;
