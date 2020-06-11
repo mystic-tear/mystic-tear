@@ -1,12 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!91 &9100000
-AnimatorController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: idle1
-  serializedVersion: 5
-  m_AnimatorParameters: []
-  m_AnimatorLayers: []
+version https://git-lfs.github.com/spec/v1
+oid sha256:744cec30f1d0e4a0217df2df7dda1b28fca76bdce2ba9a105ccefcc27ea5cd95
+size 296

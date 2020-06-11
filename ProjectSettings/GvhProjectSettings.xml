@@ -1,7 +1,3 @@
-<projectSettings>
-  <projectSetting name="Google.IOSResolver.VerboseLoggingEnabled" value="False" />
-  <projectSetting name="Google.PackageManagerResolver.VerboseLoggingEnabled" value="False" />
-  <projectSetting name="Google.VersionHandler.VerboseLoggingEnabled" value="False" />
-  <projectSetting name="GooglePlayServices.PromptBeforeAutoResolution" value="False" />
-  <projectSetting name="GooglePlayServices.UseJetifier" value="True" />
-</projectSettings>
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e58e51972d88a64d866be3d63444df874fe2abdc0333ae4c630a4a702a43c2a
+size 544
