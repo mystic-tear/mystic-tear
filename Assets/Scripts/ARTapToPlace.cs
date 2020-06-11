@@ -14,7 +14,7 @@ public class ARTapToPlace : MonoBehaviour
     private GameObject spawnedObject;
 
     [SerializeField]
-    private int maxAllowableCreatures;
+    private int maxAllowableCreatures = 1;
     private int spawnedCreaturesCount;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
