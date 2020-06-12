@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0513857f04340c4a78eb80700b858c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 3071188233947517989, guid: 2beaefb8db6f1c34fbed569e6c5e0697,
+  placedPrefab: {fileID: 4545066741979965358, guid: 89c2edf644e0c0240bbbedafe51a923f,
     type: 3}
   welcomePanel: {fileID: 1906447743}
   dismissButton: {fileID: 286459805}

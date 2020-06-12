@@ -243,8 +243,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: Documents/user.keystore'
-  AndroidKeyaliasName: mystictear
+  AndroidKeystoreName: '{inproject}: Assets/release2.keystore'
+  AndroidKeyaliasName: releasekey2
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
