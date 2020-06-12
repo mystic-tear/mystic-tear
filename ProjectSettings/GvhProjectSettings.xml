@@ -1,12 +1,7 @@
 <projectSettings>
   <projectSetting name="Google.IOSResolver.VerboseLoggingEnabled" value="False" />
   <projectSetting name="Google.PackageManagerResolver.VerboseLoggingEnabled" value="False" />
-<<<<<<< HEAD
-  <projectSetting name="Google.VersionHandler.VerboseLoggingEnabled" value="True" />
-  <projectSetting name="Google.VersionHandler.VersionHandlingEnabled" value="True" />
-=======
   <projectSetting name="Google.VersionHandler.VerboseLoggingEnabled" value="False" />
->>>>>>> master
   <projectSetting name="GooglePlayServices.PromptBeforeAutoResolution" value="False" />
   <projectSetting name="GooglePlayServices.UseJetifier" value="True" />
 </projectSettings>

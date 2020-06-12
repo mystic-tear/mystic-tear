@@ -1,17 +1,11 @@
 <dependencies>
   <packages>
     <package>com.google.firebase:firebase-analytics:17.4.1</package>
-<<<<<<< HEAD
     <package>com.google.firebase:firebase-app-unity:6.15.0</package>
     <package>com.google.firebase:firebase-auth:19.3.1</package>
     <package>com.google.firebase:firebase-auth-unity:6.15.0</package>
     <package>com.google.firebase:firebase-common:19.3.0</package>
     <package>com.google.games:gpgs-plugin-support:0.10.09</package>
-=======
-    <package>com.google.firebase:firebase-analytics-unity:6.15.0</package>
-    <package>com.google.firebase:firebase-app-unity:6.15.0</package>
-    <package>com.google.firebase:firebase-common:19.3.0</package>
->>>>>>> master
   </packages>
   <files>
     <file>Assets/Plugins/Android/androidx.annotation.annotation-1.1.0.jar</file>
@@ -42,7 +36,6 @@
     <file>Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.0.0.aar</file>
-<<<<<<< HEAD
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-18.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-api-phone-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-base-17.0.0.aar</file>
@@ -50,33 +43,21 @@
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.1.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-drive-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-games-19.0.0.aar</file>
-=======
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-base-17.0.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.0.0.aar</file>
->>>>>>> master
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-17.4.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-17.4.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-17.4.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-impl-17.4.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-17.4.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-17.4.1.aar</file>
-<<<<<<< HEAD
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-nearby-17.0.0.aar</file>
-=======
->>>>>>> master
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-stats-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.auto.value.auto-value-annotations-1.6.5.jar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-17.4.1.aar</file>
-<<<<<<< HEAD
     <file>Assets/Plugins/Android/com.google.firebase.firebase-app-unity-6.15.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-19.3.1.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-interop-19.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-unity-6.15.0.aar</file>
-=======
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-unity-6.15.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-app-unity-6.15.0.aar</file>
->>>>>>> master
     <file>Assets/Plugins/Android/com.google.firebase.firebase-common-19.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-components-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-iid-20.1.5.aar</file>
@@ -84,16 +65,10 @@
     <file>Assets/Plugins/Android/com.google.firebase.firebase-installations-16.2.1.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-installations-interop-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-measurement-connector-18.0.0.aar</file>
-<<<<<<< HEAD
     <file>Assets/Plugins/Android/com.google.games.gpgs-plugin-support-0.10.09.aar</file>
   </files>
   <settings>
     <setting name="androidAbis" value="arm64-v8a" />
-=======
-  </files>
-  <settings>
-    <setting name="androidAbis" value="armeabi-v7a" />
->>>>>>> master
     <setting name="bundleId" value="com.MysticTear.mystictear" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
