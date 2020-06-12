@@ -182,7 +182,11 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
+<<<<<<< HEAD
   iOSTargetOSVersionString: 10.0
+=======
+  iOSTargetOSVersionString: 11.0
+>>>>>>> master
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 10.0
@@ -233,8 +237,13 @@ PlayerSettings:
   tvOSManualSigningProvisioningProfileID: 
   iOSManualSigningProvisioningProfileType: 0
   tvOSManualSigningProvisioningProfileType: 0
+<<<<<<< HEAD
   appleEnableAutomaticSigning: 0
   iOSRequireARKit: 0
+=======
+  appleEnableAutomaticSigning: 1
+  iOSRequireARKit: 1
+>>>>>>> master
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   clonedFromGUID: 00000000000000000000000000000000
@@ -377,7 +386,11 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
+<<<<<<< HEAD
   cameraUsageDescription: 
+=======
+  cameraUsageDescription: Required for augmented reality support.
+>>>>>>> master
   locationUsageDescription: 
   microphoneUsageDescription: 
   switchNetLibKey: 

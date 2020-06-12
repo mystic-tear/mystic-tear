@@ -1,10 +1,6 @@
 fileFormatVersion: 2
-guid: dc57c05490f3b6f489cc103fdbf9d111
-<<<<<<< HEAD
-labels:
-- gvh
-=======
->>>>>>> master
+guid: a71b0409dc0bb45078d41295974139f0
+folderAsset: yes
 DefaultImporter:
   externalObjects: {}
   userData: 
