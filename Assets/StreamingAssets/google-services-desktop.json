@@ -1,34 +1,38 @@
 {
   "project_info": {
-    "project_number": "1009106540093",
-    "firebase_url": "https://mystictear-c0bce.firebaseio.com",
-    "project_id": "mystictear-c0bce",
-    "storage_bucket": "mystictear-c0bce.appspot.com"
+    "project_number": "329072878287",
+    "firebase_url": "https://mystic-tear-279214.firebaseio.com",
+    "project_id": "mystic-tear-279214",
+    "storage_bucket": "mystic-tear-279214.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1009106540093:android:d4e0e0a5f24c1e911cbc54",
+        "mobilesdk_app_id": "1:329072878287:android:ea1a793b33e0ef6e948dba",
         "android_client_info": {
           "package_name": "com.MysticTear.mystictear"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1009106540093-s2gfpoa6hfli21qv09g72n3ie1dq97jf.apps.googleusercontent.com",
-          "client_type": 3
+          "client_id": "329072878287-68vtr1lf3jp46u41c92gjf76gi4b39f2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.MysticTear.mystictear",
+            "certificate_hash": "80cd27d0c7265cf4c18641dc3630f3baa2fe5f5d"
+          }
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDk6wrsAOeqilRjhohfsxLmi0nZpZccsy0"
+          "current_key": "AIzaSyCaBidy2UpqvOBAFGMAS8kAe-3mcR5sXt8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1009106540093-s2gfpoa6hfli21qv09g72n3ie1dq97jf.apps.googleusercontent.com",
+              "client_id": "329072878287-l0cl529ggl8q1bcgk1ig7821oovei24m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

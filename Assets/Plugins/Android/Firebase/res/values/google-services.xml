@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
-  <string name="firebase_database_url" translatable="false">https://mystictear-c0bce.firebaseio.com</string>
-  <string name="gcm_defaultSenderId" translatable="false">1009106540093</string>
-  <string name="google_storage_bucket" translatable="false">mystictear-c0bce.appspot.com</string>
-  <string name="project_id" translatable="false">mystictear-c0bce</string>
-  <string name="google_api_key" translatable="false">AIzaSyDk6wrsAOeqilRjhohfsxLmi0nZpZccsy0</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDk6wrsAOeqilRjhohfsxLmi0nZpZccsy0</string>
-  <string name="google_app_id" translatable="false">1:1009106540093:android:d4e0e0a5f24c1e911cbc54</string>
-  <string name="default_web_client_id" translatable="false">1009106540093-s2gfpoa6hfli21qv09g72n3ie1dq97jf.apps.googleusercontent.com</string>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_android_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://mystic-tear-279214.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">329072878287</string>
+  <string name="google_storage_bucket" translatable="false">mystic-tear-279214.appspot.com</string>
+  <string name="project_id" translatable="false">mystic-tear-279214</string>
+  <string name="google_api_key" translatable="false">AIzaSyCaBidy2UpqvOBAFGMAS8kAe-3mcR5sXt8</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCaBidy2UpqvOBAFGMAS8kAe-3mcR5sXt8</string>
+  <string name="google_app_id" translatable="false">1:329072878287:android:ea1a793b33e0ef6e948dba</string>
+  <string name="default_android_client_id" translatable="false">329072878287-68vtr1lf3jp46u41c92gjf76gi4b39f2.apps.googleusercontent.com</string>
 </resources>
