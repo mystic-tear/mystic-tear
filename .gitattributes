@@ -105,4 +105,3 @@
 *.unity   linguist-generated
 *.bundle filter=lfs diff=lfs merge=lfs -text
 *.srcaar filter=lfs diff=lfs merge=lfs -text
-. !text !filter !merge !diff
