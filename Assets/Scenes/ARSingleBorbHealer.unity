@@ -557,7 +557,7 @@ MonoBehaviour:
   m_PoseSource: 6
   m_PoseProviderComponent: {fileID: 0}
   m_TrackingType: 0
-  m_UpdateType: 0
+  m_UpdateType: 1
   m_UseRelativeTransform: 0
 --- !u!4 &428683393
 Transform:
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0513857f04340c4a78eb80700b858c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 5584140780590638845, guid: f0d903562e3660b4799d8c8f3228d2dd,
+  placedPrefab: {fileID: 3607573612807597683, guid: 3a07351a6cd73264098fe2677150b988,
     type: 3}
   welcomePanel: {fileID: 1906447743}
   dismissButton: {fileID: 286459805}
@@ -1445,7 +1445,7 @@ Transform:
   m_GameObject: {fileID: 2097004494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 428683393}
   m_Father: {fileID: 0}
