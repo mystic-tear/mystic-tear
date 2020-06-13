@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.google.firebase.auth": "6.15.0",
     "com.unity.2d.animation": "3.2.2",
     "com.unity.2d.pixel-perfect": "2.0.4",
     "com.unity.2d.psdimporter": "2.1.4",
