@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.google.external-dependency-manager": "1.2.155",
     "com.google.firebase.auth": "6.15.0",
     "com.unity.2d.animation": "3.2.2",
     "com.unity.2d.pixel-perfect": "2.0.4",
@@ -10,14 +11,14 @@
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
     "com.unity.ide.vscode": "1.2.1",
+    "com.unity.subsystemregistration": "1.0.6",
     "com.unity.test-framework": "1.1.14",
     "com.unity.textmeshpro": "2.0.1",
     "com.unity.timeline": "1.2.14",
     "com.unity.ugui": "1.0.0",
     "com.unity.xr.arcore": "2.1.8",
     "com.unity.xr.arfoundation": "2.1.8",
-    "com.unity.xr.arkit-face-tracking": "1.0.7",
-    "com.unity.xr.management": "3.2.10",
+    "com.unity.xr.interactionsubsystems": "1.0.1",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
