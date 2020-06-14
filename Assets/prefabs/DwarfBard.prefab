@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c7449ce29c1c45eeaf618c20f3eb459, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b95c9f309d74b8947bd2b8a5c68f18d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720656487445034785}
   m_Layer: 0
-  m_Name: basedwarfbard
+  m_Name: DwarfBard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
