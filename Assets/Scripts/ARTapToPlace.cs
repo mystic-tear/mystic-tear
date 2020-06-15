@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -8,7 +10,6 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARTapToPlace : MonoBehaviour
 {
-    [SerializeField]
     private GameObject gameObjectToInstantiate;
 
     private GameObject spawnedObject;
@@ -47,7 +48,7 @@ public class ARTapToPlace : MonoBehaviour
         if(!TryGetTouchPosition(out Vector2 touchPosition))
         return;
 
-        if(_arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
+        if(!IsPointOverUIObject(touchPosition) && _arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
             var hitPose = hits[0].pose;
             if(spawnedCreaturesCount < maxAllowableCreatures)
@@ -57,6 +58,17 @@ public class ARTapToPlace : MonoBehaviour
             
             //spawnedObject.transform.position = hitPose.position;
         }
+    }
+    bool IsPointOverUIObject(Vector2 pos)
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        return false;
+
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(pos.x, pos.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
     }
 
     public void SetGameObjectToSpawn(GameObject gameObject)
