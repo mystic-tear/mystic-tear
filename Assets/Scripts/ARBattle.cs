@@ -14,7 +14,7 @@ public class ARBattle : MonoBehaviour
     private GameObject spawnedObject;
 
     [SerializeField]
-    private int maxAllowableCreatures = 2;
+    private int maxAllowableCreatures = 5;
     private int spawnedCreaturesCount = 0;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
@@ -22,11 +22,23 @@ public class ARBattle : MonoBehaviour
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     
+    public int maxCreaturesHealth;
+    public int currentCreaturesHealth;
+    public HealthBar creaturesHealthBar;
+    public int maxEnemyHealth;
+    public int currentEnemyHealth;
+    public HealthBar enemyHealthBar;
+    
     
     // Start is called before the first frame update
     private void Awake()
     {
         _arRaycastManager = GetComponent<ARRaycastManager>();
+
+        currentCreaturesHealth = maxCreaturesHealth;
+        creaturesHealthBar.SetMaxHealth(maxCreaturesHealth);
+        currentEnemyHealth = maxEnemyHealth;
+        enemyHealthBar.SetMaxHealth(maxEnemyHealth);
 
     }
 
@@ -57,24 +69,22 @@ public class ARBattle : MonoBehaviour
             //spawnedObject.transform.position = hitPose.position;
         }
 
-        if(spawnedCreaturesCount == maxAllowableCreatures)
-        {
-            battleStart(placedGameObjectsList);
-        }
+        // if(spawnedCreaturesCount == maxAllowableCreatures)
+        // {
+        //     battleStart(placedGameObjectsList);
+        // }
     }
     
-    private void battleStart(List<GameObject> placedGameObjects)
-    {
-        var creature1 = placedGameObjects[0];
-        var creature2 = placedGameObjects[1];
+    // private void battleStart(List<GameObject> placedGameObjects)
+    // {
+    //     var creature1 = placedGameObjects[0];
+    //     var creature2 = placedGameObjects[1];
 
-        creature1.AddComponent<CreatureHealth>();
-        
-        creature2.tag = "bad";
-        creature2.AddComponent<EnemyHealth>();
-        creature2.AddComponent<EnemyFollow>();
+    //     creature1.AddComponent<EnemyFollow>();
+    //     creature2.AddComponent<EnemyHealth>();
+    //     creature2.AddComponent<EnemyFollow>();
 
-    }
+    // }
     
     bool IsPointOverUIObject(Vector2 pos)
     {
@@ -100,5 +110,17 @@ public class ARBattle : MonoBehaviour
         AndroidManager.HapticFeedback();
         placedGameObjectsList.Add(spawnedObject);
         spawnedCreaturesCount++;
+    }
+
+    void CreaturesTakeDamage(int damage)
+    {
+        currentCreaturesHealth -= damage;
+        creaturesHealthBar.SetHealth(currentCreaturesHealth);
+    }
+
+    void EnemyTakeDamage(int damage)
+    {
+        currentEnemyHealth -= damage;
+        enemyHealthBar.SetHealth(currentEnemyHealth);
     }
 }

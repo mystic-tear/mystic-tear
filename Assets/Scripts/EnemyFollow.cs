@@ -1,23 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public float speed = 5;
-    public float stoppingDistance = 3;
+    private float speed;
+    private float stoppingDistance = 1.5F;
 
     private Transform target;
+    private bool inBattle = false;
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("good").GetComponent<Transform>();
+        Scene currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name == "ARBattle")
+        {
+            inBattle = true;
+        }
+        speed = Random.Range(5,11);
+        target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
     }
 
     void Update()
     {
-        if(Vector2.Distance(transform.position, target.position) > stoppingDistance)
+        if(inBattle)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            if(target == null)
+            {
+                searchForTarget();
+            }
+            else 
+            {
+                chaseTarget();
+            }
         }
     }
+
+    void searchForTarget()
+    {
+        target = GameObject.FindGameObjectWithTag("good").GetComponent<Transform>();
+    }
+
+    void chaseTarget()
+    {
+        if(Vector3.Distance(transform.position, target.position) > stoppingDistance)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+    }
+
 }
