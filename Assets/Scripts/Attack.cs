@@ -21,10 +21,6 @@ public class Attack : MonoBehaviour
         }
         
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
-        Debug.Log("I'm in enemyFollows : Start after: inBattle =" + inBattle);
-        Debug.Log("I'm in enemyFollows: start : target =" + target);
-        Debug.Log("I'm in enemyFollows: start : speed =" + speed);
-        Debug.Log("I'm in enemyFollows: start : stoppingDistance =" + stoppingDistance);
 
     }
 
@@ -54,7 +50,7 @@ public class Attack : MonoBehaviour
         if(Vector3.Distance(transform.position, target.position) <= attackDistance)
         {
             Debug.Log("I'm in attack : attackTarget : RUNNING start");
-            ARBattle.
+            
             Debug.Log("I'm in attack : attackTarget : RUNNING end");
         }
     }
