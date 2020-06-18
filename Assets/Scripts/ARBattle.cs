@@ -6,18 +6,19 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARRaycastManager))]
+[RequireComponent(typeof(ARPlaneManager))]
 
 public class ARBattle : MonoBehaviour
 {
     private GameObject gameObjectToInstantiate;
-
     private GameObject spawnedObject;
-
-    [SerializeField]
     private int maxAllowableCreatures = 5;
     private int spawnedCreaturesCount = 0;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
+    private ARPlaneManager _arPlaneManager;
+    private bool detectPlanes;
+    private bool planesAreVisible;
     private Vector2 touchPosition;
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -33,12 +34,14 @@ public class ARBattle : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        _arPlaneManager = GetComponent<ARPlaneManager>();
         _arRaycastManager = GetComponent<ARRaycastManager>();
 
         currentCreaturesHealth = maxCreaturesHealth;
         creaturesHealthBar.SetMaxHealth(maxCreaturesHealth);
         currentEnemyHealth = maxEnemyHealth;
         enemyHealthBar.SetMaxHealth(maxEnemyHealth);
+        Debug.Log("I'm ARBattle : Awake : maxCreaturespawn =" + maxAllowableCreatures);
 
     }
 
@@ -68,23 +71,7 @@ public class ARBattle : MonoBehaviour
             }
             //spawnedObject.transform.position = hitPose.position;
         }
-
-        // if(spawnedCreaturesCount == maxAllowableCreatures)
-        // {
-        //     battleStart(placedGameObjectsList);
-        // }
     }
-    
-    // private void battleStart(List<GameObject> placedGameObjects)
-    // {
-    //     var creature1 = placedGameObjects[0];
-    //     var creature2 = placedGameObjects[1];
-
-    //     creature1.AddComponent<EnemyFollow>();
-    //     creature2.AddComponent<EnemyHealth>();
-    //     creature2.AddComponent<EnemyFollow>();
-
-    // }
     
     bool IsPointOverUIObject(Vector2 pos)
     {
@@ -109,18 +96,55 @@ public class ARBattle : MonoBehaviour
         spawnedObject = Instantiate(gameObjectToInstantiate, hitPose.position, hitPose.rotation);
         AndroidManager.HapticFeedback();
         placedGameObjectsList.Add(spawnedObject);
+        Debug.Log("I'm ARBattle : spawnCreature : tag first =" + spawnedObject.tag);
+        
         spawnedCreaturesCount++;
+
+        if(spawnedCreaturesCount != maxAllowableCreatures)
+        {
+            maxCreaturesHealth += 100;
+            currentCreaturesHealth = maxCreaturesHealth;
+            creaturesHealthBar.SetMaxHealth(maxCreaturesHealth);
+            creaturesHealthBar.SetHealth(currentCreaturesHealth);
+
+        }
+        
+        if(spawnedCreaturesCount == maxAllowableCreatures)
+        {
+            spawnedObject.tag = "bad";
+            maxEnemyHealth += 100;
+            currentEnemyHealth = maxEnemyHealth;
+            enemyHealthBar.SetMaxHealth(maxEnemyHealth);
+            enemyHealthBar.SetHealth(currentEnemyHealth);
+            PlaneToggle();
+            TrackingToggle();
+        }
+
+        Debug.Log("I'm ARBattle : spawnCreature : tag second =" + spawnedObject.tag);
     }
 
-    void CreaturesTakeDamage(int damage)
+    public void CreaturesTakeDamage(int damage)
     {
         currentCreaturesHealth -= damage;
         creaturesHealthBar.SetHealth(currentCreaturesHealth);
     }
 
-    void EnemyTakeDamage(int damage)
+    public void EnemyTakeDamage(int damage)
     {
         currentEnemyHealth -= damage;
         enemyHealthBar.SetHealth(currentEnemyHealth);
     }
+
+    public void TrackingToggle()
+    {
+        detectPlanes = !detectPlanes;
+        _arPlaneManager.detectionMode = detectPlanes ? PlaneDetectionMode.Horizontal : PlaneDetectionMode.None;
+    }
+
+    public void PlaneToggle()
+    {
+        planesAreVisible = !planesAreVisible;
+        _arPlaneManager.planePrefab.SetActive(planesAreVisible);
+    }
+
 }

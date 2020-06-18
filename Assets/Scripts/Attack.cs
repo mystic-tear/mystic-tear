@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyFollow : MonoBehaviour
-{
-    private float speed;
-    private float stoppingDistance = 2F;
 
+public class Attack : MonoBehaviour
+{
     private Transform target;
     private bool inBattle = false;
+    private int attackDistance = 2;
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -20,7 +19,7 @@ public class EnemyFollow : MonoBehaviour
         {
             inBattle = true;
         }
-        speed = Random.Range(5,11);
+        
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
         Debug.Log("I'm in enemyFollows : Start after: inBattle =" + inBattle);
         Debug.Log("I'm in enemyFollows: start : target =" + target);
@@ -39,7 +38,7 @@ public class EnemyFollow : MonoBehaviour
             }
             else 
             {
-                chaseTarget();
+                attackTarget();
             }
         }
     }
@@ -50,14 +49,13 @@ public class EnemyFollow : MonoBehaviour
         Debug.Log("I'm in enemyFollows: searchForTarget : target =" + target);
     }
 
-    void chaseTarget()
+    void attackTarget()
     {
-        if(Vector3.Distance(transform.position, target.position) > stoppingDistance)
+        if(Vector3.Distance(transform.position, target.position) <= attackDistance)
         {
-            Debug.Log("I'm in enemyFollows : chaseTarget : RUNNING start");
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-            Debug.Log("I'm in enemyFollows : chaseTarget : RUNNING end");
+            Debug.Log("I'm in attack : attackTarget : RUNNING start");
+            ARBattle.
+            Debug.Log("I'm in attack : attackTarget : RUNNING end");
         }
     }
-
 }

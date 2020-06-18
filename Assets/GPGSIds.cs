@@ -24,7 +24,7 @@
 
 public static class GPGSIds
 {
-        public const string achievement_have_your_own_creatures = "CgkIz8WW8skJEAIQAg"; // <GPGSID>
+        public const string achievement_collect_a_creature = "CgkIofeNjoweEAIQAg"; // <GPGSID>
 
 }
 

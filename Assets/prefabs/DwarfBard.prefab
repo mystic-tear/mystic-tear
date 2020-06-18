@@ -191,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720656487445034785}
-  - component: {fileID: 1137556886027373804}
+  - component: {fileID: 7083553961113148504}
   m_Layer: 0
   m_Name: DwarfBard
   m_TagString: good
@@ -215,7 +215,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1137556886027373804
+--- !u!114 &7083553961113148504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

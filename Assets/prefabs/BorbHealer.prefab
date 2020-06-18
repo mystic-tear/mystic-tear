@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7931089908924599374}
-  - component: {fileID: 5007033355464046832}
+  - component: {fileID: 6696704140155787298}
   m_Layer: 0
   m_Name: BorbHealer
   m_TagString: good
@@ -114,7 +114,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5007033355464046832
+--- !u!114 &6696704140155787298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
