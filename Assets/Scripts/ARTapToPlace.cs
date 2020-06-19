@@ -7,6 +7,8 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARRaycastManager))]
+[RequireComponent(typeof(ARPlaneManager))]
+
 
 public class ARTapToPlace : MonoBehaviour
 {
@@ -19,6 +21,9 @@ public class ARTapToPlace : MonoBehaviour
     private int spawnedCreaturesCount;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
+    private ARPlaneManager _arPlaneManager;
+    private bool detectPlanes;
+    private bool planesAreVisible;
     private Vector2 touchPosition;
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -28,6 +33,7 @@ public class ARTapToPlace : MonoBehaviour
     private void Awake()
     {
         _arRaycastManager = GetComponent<ARRaycastManager>();
+        _arPlaneManager = GetComponent<ARPlaneManager>();
 
     }
 
@@ -54,6 +60,12 @@ public class ARTapToPlace : MonoBehaviour
             if(spawnedCreaturesCount < maxAllowableCreatures)
             {
                 spawnCreature(hitPose);
+            }
+
+            if(spawnedCreaturesCount == maxAllowableCreatures)
+            {
+                PlaneToggle();
+                TrackingToggle();
             }
             
             //spawnedObject.transform.position = hitPose.position;
@@ -83,5 +95,17 @@ public class ARTapToPlace : MonoBehaviour
         AndroidManager.HapticFeedback();
         placedGameObjectsList.Add(spawnedObject);
         spawnedCreaturesCount++;
+    }
+
+    public void TrackingToggle()
+    {
+        detectPlanes = !detectPlanes;
+        _arPlaneManager.detectionMode = detectPlanes ? PlaneDetectionMode.Horizontal : PlaneDetectionMode.None;
+    }
+
+    public void PlaneToggle()
+    {
+        planesAreVisible = !planesAreVisible;
+        _arPlaneManager.planePrefab.SetActive(planesAreVisible);
     }
 }
