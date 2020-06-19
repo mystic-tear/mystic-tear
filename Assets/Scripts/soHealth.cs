@@ -1,35 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "soHealth", menuName = "battleData/soHealth", order = 0)]
 public class soHealth : ScriptableObject {
     
     private int _health;
     private int _maxHealth;
+    private bool _maxLeft;
     
-    public int health => _health;
-    public int maxHealth => _maxHealth;
+    public int health
+    {
+        get { return _health; }
+        set { _health = value; }
+    }
+
+    public int maxHealth { get; set; }
+
+    public bool maxLeft {get; set; }
 
     public void ChangeBy(int changeBy)
     {
         _health += changeBy;
     }
 
-    public void SetHealth(int setAmount)
-    {
-        _health = setAmount;
-    }
-
-    public void SetMax(int setAmount)
-    {
-        _maxHealth = setAmount;
-    }
-
     public void Reset()
     {
-        SetMax(0);
-        SetHealth(0);
+        health = 0;
+        maxHealth = 0;
     }
 
 }

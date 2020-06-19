@@ -10,6 +10,7 @@ public class Attack : MonoBehaviour
     private Transform target;
     private bool inBattle = false;
     private int attackDistance = 2;
+    //private int attackAmount = 10;
     private ARBattle battle;
     void Start()
     {
@@ -21,6 +22,8 @@ public class Attack : MonoBehaviour
         {
             inBattle = true;
         }
+        
+        //battle = FindObjectOfType<EnemyTakeDamage>();
         
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
 
@@ -44,7 +47,7 @@ public class Attack : MonoBehaviour
     void searchForTarget()
     {
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
-        Debug.Log("I'm in enemyFollows: searchForTarget : target =" + target);
+        Debug.Log("I'm in attack: searchForTarget : target =" + target);
     }
 
     void attackTarget()
@@ -52,7 +55,7 @@ public class Attack : MonoBehaviour
         if(Vector3.Distance(transform.position, target.position) <= attackDistance)
         {
             Debug.Log("I'm in attack : attackTarget : RUNNING start");
-            battle.EnemyTakeDamage(10);
+            //battle.EnemyTakeDamage(attackAmount);
             Debug.Log("I'm in attack : attackTarget : RUNNING end");
         }
     }
