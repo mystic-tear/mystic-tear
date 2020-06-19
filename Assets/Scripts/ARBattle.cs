@@ -12,6 +12,8 @@ public class ARBattle : MonoBehaviour
 {
     private GameObject gameObjectToInstantiate;
     private GameObject spawnedObject;
+    private int healthAmount = 100;
+    private int enemyMaxHealth = 500;
     private int maxAllowableCreatures = 5;
     private int spawnedCreaturesCount = 0;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
@@ -23,12 +25,8 @@ public class ARBattle : MonoBehaviour
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     
-    public int maxCreaturesHealth;
-    public int currentCreaturesHealth;
-    public HealthBar creaturesHealthBar;
-    public int maxEnemyHealth;
-    public int currentEnemyHealth;
-    public HealthBar enemyHealthBar;
+    public soHealth playerHealth;
+    public soHealth enemyHealth;
     
     
     // Start is called before the first frame update
@@ -37,12 +35,8 @@ public class ARBattle : MonoBehaviour
         _arPlaneManager = GetComponent<ARPlaneManager>();
         _arRaycastManager = GetComponent<ARRaycastManager>();
 
-        currentCreaturesHealth = maxCreaturesHealth;
-        creaturesHealthBar.SetMaxHealth(maxCreaturesHealth);
-        currentEnemyHealth = maxEnemyHealth;
-        enemyHealthBar.SetMaxHealth(maxEnemyHealth);
-        Debug.Log("I'm ARBattle : Awake : maxCreaturespawn =" + maxAllowableCreatures);
-
+        playerHealth.health = playerHealth.maxHealth;
+        enemyHealth.health = enemyHealth.maxHealth;
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -96,43 +90,24 @@ public class ARBattle : MonoBehaviour
         spawnedObject = Instantiate(gameObjectToInstantiate, hitPose.position, hitPose.rotation);
         AndroidManager.HapticFeedback();
         placedGameObjectsList.Add(spawnedObject);
-        Debug.Log("I'm ARBattle : spawnCreature : tag first =" + spawnedObject.tag);
         
         spawnedCreaturesCount++;
 
         if(spawnedCreaturesCount != maxAllowableCreatures)
         {
-            maxCreaturesHealth += 100;
-            currentCreaturesHealth = maxCreaturesHealth;
-            creaturesHealthBar.SetMaxHealth(maxCreaturesHealth);
-            creaturesHealthBar.SetHealth(currentCreaturesHealth);
-
+            playerHealth.ChangeBy(healthAmount);
+            playerHealth.maxHealth += healthAmount;
         }
         
         if(spawnedCreaturesCount == maxAllowableCreatures)
         {
             spawnedObject.tag = "bad";
-            maxEnemyHealth += 100;
-            currentEnemyHealth = maxEnemyHealth;
-            enemyHealthBar.SetMaxHealth(maxEnemyHealth);
-            enemyHealthBar.SetHealth(currentEnemyHealth);
+            enemyHealth.maxHealth = enemyMaxHealth;
+            enemyHealth.health = enemyHealth.maxHealth;
             PlaneToggle();
             TrackingToggle();
         }
 
-        Debug.Log("I'm ARBattle : spawnCreature : tag second =" + spawnedObject.tag);
-    }
-
-    public void CreaturesTakeDamage(int damage)
-    {
-        currentCreaturesHealth -= damage;
-        creaturesHealthBar.SetHealth(currentCreaturesHealth);
-    }
-
-    public void EnemyTakeDamage(int damage)
-    {
-        currentEnemyHealth -= damage;
-        enemyHealthBar.SetHealth(currentEnemyHealth);
     }
 
     public void TrackingToggle()

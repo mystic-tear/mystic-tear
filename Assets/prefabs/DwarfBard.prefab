@@ -192,6 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720656487445034785}
   - component: {fileID: 7083553961113148504}
+  - component: {fileID: 8637178184199147334}
   m_Layer: 0
   m_Name: DwarfBard
   m_TagString: good
@@ -225,5 +226,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7411d7960d6afe429448b4039ed2e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8637178184199147334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018570568325517495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb30781cfb6e25840be54080a54e40d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

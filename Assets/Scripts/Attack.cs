@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class Attack : MonoBehaviour
 {
+
     private Transform target;
     private bool inBattle = false;
     private int attackDistance = 2;
+    //private int attackAmount = 10;
+    private soHealth playerHealth;
+    private soHealth enemyHealth;
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -19,6 +23,9 @@ public class Attack : MonoBehaviour
         {
             inBattle = true;
         }
+        
+        playerHealth = FindObjectOfType<ARBattle>().playerHealth;
+        enemyHealth = FindObjectOfType<ARBattle>().enemyHealth;
         
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
 
@@ -42,7 +49,7 @@ public class Attack : MonoBehaviour
     void searchForTarget()
     {
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
-        Debug.Log("I'm in enemyFollows: searchForTarget : target =" + target);
+        Debug.Log("I'm in attack: searchForTarget : target =" + target);
     }
 
     void attackTarget()
@@ -50,8 +57,18 @@ public class Attack : MonoBehaviour
         if(Vector3.Distance(transform.position, target.position) <= attackDistance)
         {
             Debug.Log("I'm in attack : attackTarget : RUNNING start");
-            
+            EnemyTakeDamage(10);
             Debug.Log("I'm in attack : attackTarget : RUNNING end");
         }
+    }
+
+    public void CreaturesTakeDamage(int damage)
+    {
+        playerHealth.ChangeBy(-damage);
+    }
+
+    public void EnemyTakeDamage(int damage)
+    {
+        enemyHealth.ChangeBy(-damage);
     }
 }

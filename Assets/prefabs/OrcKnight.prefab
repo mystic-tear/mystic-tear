@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1252438189725648424}
   - component: {fileID: 3938584091818386057}
+  - component: {fileID: 2194105624643282824}
   m_Layer: 0
   m_Name: OrcKnight
   m_TagString: good
@@ -43,6 +44,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7411d7960d6afe429448b4039ed2e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2194105624643282824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352629248768104814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb30781cfb6e25840be54080a54e40d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7442550968710667778
