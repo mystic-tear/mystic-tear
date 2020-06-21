@@ -13,7 +13,7 @@ public class ARBattle : MonoBehaviour
     private GameObject gameObjectToInstantiate;
     private GameObject spawnedObject;
     private int healthAmount = 100;
-    private int enemyMaxHealth = 500;
+    private int enemyMaxHealth = 5000;
     private int maxAllowableCreatures = 5;
     private int spawnedCreaturesCount = 0;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();

@@ -10,14 +10,12 @@ public class Attack : MonoBehaviour
     private Transform target;
     private bool inBattle = false;
     private int attackDistance = 2;
-    //private int attackAmount = 10;
+    private int attackAmount = 1;
     private soHealth playerHealth;
     private soHealth enemyHealth;
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        Debug.Log("I'm in enemyFollows : Start.sceneName =" + currentScene.name);
-        Debug.Log("I'm in enemyFollows : Start before : inBattle =" + inBattle);
 
         if(currentScene.name == "ARBattle")
         {
@@ -49,16 +47,13 @@ public class Attack : MonoBehaviour
     void searchForTarget()
     {
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
-        Debug.Log("I'm in attack: searchForTarget : target =" + target);
     }
 
     void attackTarget()
     {
         if(Vector3.Distance(transform.position, target.position) <= attackDistance)
         {
-            Debug.Log("I'm in attack : attackTarget : RUNNING start");
-            EnemyTakeDamage(10);
-            Debug.Log("I'm in attack : attackTarget : RUNNING end");
+            EnemyTakeDamage(attackAmount);
         }
     }
 
