@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Attack : MonoBehaviour
 {
-
     private Transform target;
     private bool inBattle = false;
     private int attackDistance = 2;
     private int attackAmount = 1;
+    private int attackSuccess = 4;
     private soHealth playerHealth;
     private soHealth enemyHealth;
+
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -39,7 +40,7 @@ public class Attack : MonoBehaviour
             }
             else 
             {
-                attackTarget();
+                StartCoroutine(attackTarget());
             }
         }
     }
@@ -49,11 +50,16 @@ public class Attack : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
     }
 
-    void attackTarget()
+    IEnumerator attackTarget()
     {
         if(Vector3.Distance(transform.position, target.position) <= attackDistance)
         {
-            EnemyTakeDamage(attackAmount);
+            if(Random.Range(0, attackSuccess + 1) == attackSuccess)
+            {
+                EnemyTakeDamage(attackAmount);
+            }
+
+            yield return new WaitForSeconds(1);
         }
     }
 

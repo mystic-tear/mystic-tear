@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,17 +19,13 @@ public class ARBattle : MonoBehaviour
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
     private ARPlaneManager _arPlaneManager;
-    private bool detectPlanes;
-    private bool planesAreVisible;
-    private Vector2 touchPosition;
+    //private Vector2 touchPosition;
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     
     public soHealth playerHealth;
     public soHealth enemyHealth;
     
-    
-    // Start is called before the first frame update
     private void Awake()
     {
         _arPlaneManager = GetComponent<ARPlaneManager>();
@@ -50,7 +46,6 @@ public class ARBattle : MonoBehaviour
         return false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(!TryGetTouchPosition(out Vector2 touchPosition))
@@ -64,6 +59,11 @@ public class ARBattle : MonoBehaviour
                 spawnCreature(hitPose);
             }
             //spawnedObject.transform.position = hitPose.position;
+        }
+
+        if(placedGameObjectsList[4] && (enemyHealth.health <= 0))
+        {
+            Destroy(placedGameObjectsList[4]);
         }
     }
     
@@ -104,22 +104,20 @@ public class ARBattle : MonoBehaviour
             spawnedObject.tag = "bad";
             enemyHealth.maxHealth = enemyMaxHealth;
             enemyHealth.health = enemyHealth.maxHealth;
-            PlaneToggle();
-            TrackingToggle();
+            PlaneToggle(false);
         }
 
     }
 
-    public void TrackingToggle()
+    public void PlaneToggle(bool flag)
     {
-        detectPlanes = !detectPlanes;
-        _arPlaneManager.detectionMode = detectPlanes ? PlaneDetectionMode.Horizontal : PlaneDetectionMode.None;
-    }
-
-    public void PlaneToggle()
-    {
-        planesAreVisible = !planesAreVisible;
-        _arPlaneManager.planePrefab.SetActive(planesAreVisible);
+        foreach (GameObject plane in GameObject.FindGameObjectsWithTag ("plane"))
+        {
+            Renderer r = plane.GetComponent<Renderer>();
+            ARPlaneMeshVisualizer t = plane.GetComponent<ARPlaneMeshVisualizer>();
+            r.enabled = flag;
+            t.enabled = flag;
+        }
     }
 
 }

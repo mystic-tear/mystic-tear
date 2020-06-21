@@ -16,6 +16,11 @@ public class soHealth : ScriptableObject {
 
     public void ChangeBy(int changeBy)
     {
+        if((_health += changeBy) <= 0)
+        {
+            _health = 0;
+        }
+        
         _health += changeBy;
     }
 
