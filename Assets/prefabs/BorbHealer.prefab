@@ -92,6 +92,8 @@ GameObject:
   - component: {fileID: 7931089908924599374}
   - component: {fileID: 6696704140155787298}
   - component: {fileID: 8332320051564557764}
+  - component: {fileID: 1289953267155293797}
+  - component: {fileID: 7815243047200087259}
   m_Layer: 0
   m_Name: BorbHealer
   m_TagString: good
@@ -127,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7411d7960d6afe429448b4039ed2e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &8332320051564557764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +142,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb30781cfb6e25840be54080a54e40d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1289953267155293797
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3607573612807597683}
+  serializedVersion: 2
+  m_Mass: 60
+  m_Drag: 5
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
+--- !u!136 &7815243047200087259
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3607573612807597683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.59809494
+  m_Height: 1.1961899
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5429689, z: 0}
 --- !u!1 &7524849368636789353
 GameObject:
   m_ObjectHideFlags: 0

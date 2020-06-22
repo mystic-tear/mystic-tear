@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 1252438189725648424}
   - component: {fileID: 3938584091818386057}
   - component: {fileID: 2194105624643282824}
+  - component: {fileID: 7477831710501588831}
+  - component: {fileID: 4582571027013393745}
   m_Layer: 0
   m_Name: Ffej
-  m_TagString: good
+  m_TagString: bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7411d7960d6afe429448b4039ed2e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &2194105624643282824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +61,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb30781cfb6e25840be54080a54e40d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &7477831710501588831
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352629248768104814}
+  serializedVersion: 2
+  m_Mass: 100000000
+  m_Drag: 5
+  m_AngularDrag: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
+--- !u!136 &4582571027013393745
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352629248768104814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0808146
+  m_Height: 2.4960446
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0893531, z: 0}
 --- !u!1 &7442550968710667778
 GameObject:
   m_ObjectHideFlags: 0

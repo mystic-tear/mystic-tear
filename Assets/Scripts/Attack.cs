@@ -27,7 +27,6 @@ public class Attack : MonoBehaviour
         enemyHealth = FindObjectOfType<ARBattle>().enemyHealth;
         
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
-
     }
 
     void Update()

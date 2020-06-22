@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1252438189725648424}
   - component: {fileID: 3938584091818386057}
   - component: {fileID: 2194105624643282824}
+  - component: {fileID: 5799348558014862678}
+  - component: {fileID: 2746176686631440506}
   m_Layer: 0
   m_Name: OrcKnight
   m_TagString: good
@@ -46,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7411d7960d6afe429448b4039ed2e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &2194105624643282824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +61,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb30781cfb6e25840be54080a54e40d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &5799348558014862678
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352629248768104814}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 5
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
+--- !u!136 &2746176686631440506
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352629248768104814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4936585
+  m_Height: 1.4562447
+  m_Direction: 1
+  m_Center: {x: -0.05655922, y: 0.5561662, z: 0}
 --- !u!1 &7442550968710667778
 GameObject:
   m_ObjectHideFlags: 0
