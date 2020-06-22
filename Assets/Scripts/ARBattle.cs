@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+﻿﻿using System.Collections;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 ﻿using System.Collections;
 =======
 ﻿﻿using System.Collections;
 >>>>>>> androidDebugging
+>>>>>>> master
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,29 +22,36 @@ public class ARBattle : MonoBehaviour
     private GameObject gameObjectToInstantiate;
     private GameObject spawnedObject;
 <<<<<<< HEAD
+    private int healthAmount = 100;
+    private int enemyMaxHealth = 500;
+=======
+<<<<<<< HEAD
 =======
     private int healthAmount = 100;
     private int enemyMaxHealth = 5000;
 >>>>>>> androidDebugging
+>>>>>>> master
     private int maxAllowableCreatures = 5;
     private int spawnedCreaturesCount = 0;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
     private ARPlaneManager _arPlaneManager;
 <<<<<<< HEAD
+    //private Vector2 touchPosition;
+=======
+<<<<<<< HEAD
     private bool detectPlanes;
     private bool planesAreVisible;
     private Vector2 touchPosition;
+>>>>>>> master
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     
-    public int maxCreaturesHealth;
-    public int currentCreaturesHealth;
-    public HealthBar creaturesHealthBar;
-    public int maxEnemyHealth;
-    public int currentEnemyHealth;
-    public HealthBar enemyHealthBar;
+    public soHealth playerHealth;
+    public soHealth enemyHealth;
     
+<<<<<<< HEAD
+=======
     
     // Start is called before the first frame update
 =======
@@ -52,11 +63,18 @@ public class ARBattle : MonoBehaviour
     public soHealth enemyHealth;
     
 >>>>>>> androidDebugging
+>>>>>>> master
     private void Awake()
     {
         _arPlaneManager = GetComponent<ARPlaneManager>();
         _arRaycastManager = GetComponent<ARRaycastManager>();
 
+<<<<<<< HEAD
+        playerHealth.Reset();
+        enemyHealth.Reset();
+        //playerHealth.health = playerHealth.maxHealth;
+        //enemyHealth.health = enemyHealth.maxHealth;
+=======
 <<<<<<< HEAD
         currentCreaturesHealth = maxCreaturesHealth;
         creaturesHealthBar.SetMaxHealth(maxCreaturesHealth);
@@ -68,6 +86,7 @@ public class ARBattle : MonoBehaviour
         playerHealth.health = playerHealth.maxHealth;
         enemyHealth.health = enemyHealth.maxHealth;
 >>>>>>> androidDebugging
+>>>>>>> master
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -82,11 +101,15 @@ public class ARBattle : MonoBehaviour
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     // Update is called once per frame
 =======
 >>>>>>> androidDebugging
+>>>>>>> master
     void Update()
     {
+
         if(!TryGetTouchPosition(out Vector2 touchPosition))
         return;
 
@@ -100,6 +123,13 @@ public class ARBattle : MonoBehaviour
             //spawnedObject.transform.position = hitPose.position;
         }
 <<<<<<< HEAD
+
+        if(placedGameObjectsList[4] && (enemyHealth.health <= 0))
+        {
+            placedGameObjectsList[4].gameObject.SetActive(false);
+        }
+=======
+<<<<<<< HEAD
 =======
 
         if(placedGameObjectsList[4] && (enemyHealth.health <= 0))
@@ -107,6 +137,7 @@ public class ARBattle : MonoBehaviour
             Destroy(placedGameObjectsList[4]);
         }
 >>>>>>> androidDebugging
+>>>>>>> master
     }
     
     bool IsPointOverUIObject(Vector2 pos)
@@ -133,14 +164,21 @@ public class ARBattle : MonoBehaviour
         AndroidManager.HapticFeedback();
         placedGameObjectsList.Add(spawnedObject);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         Debug.Log("I'm ARBattle : spawnCreature : tag first =" + spawnedObject.tag);
 =======
 >>>>>>> androidDebugging
+>>>>>>> master
         
         spawnedCreaturesCount++;
 
         if(spawnedCreaturesCount != maxAllowableCreatures)
         {
+<<<<<<< HEAD
+            playerHealth.ChangeBy(healthAmount);
+            playerHealth.maxHealth += healthAmount;
+=======
 <<<<<<< HEAD
             maxCreaturesHealth += 100;
             currentCreaturesHealth = maxCreaturesHealth;
@@ -151,11 +189,17 @@ public class ARBattle : MonoBehaviour
             playerHealth.ChangeBy(healthAmount);
             playerHealth.maxHealth += healthAmount;
 >>>>>>> androidDebugging
+>>>>>>> master
         }
         
         if(spawnedCreaturesCount == maxAllowableCreatures)
         {
             spawnedObject.tag = "bad";
+<<<<<<< HEAD
+            enemyHealth.maxHealth = enemyMaxHealth;
+            enemyHealth.health = enemyHealth.maxHealth;
+            PlaneToggle(false);
+=======
 <<<<<<< HEAD
             maxEnemyHealth += 100;
             currentEnemyHealth = maxEnemyHealth;
@@ -163,33 +207,20 @@ public class ARBattle : MonoBehaviour
             enemyHealthBar.SetHealth(currentEnemyHealth);
             PlaneToggle();
             TrackingToggle();
+>>>>>>> master
         }
 
-        Debug.Log("I'm ARBattle : spawnCreature : tag second =" + spawnedObject.tag);
     }
 
-    public void CreaturesTakeDamage(int damage)
+    public void PlaneToggle(bool flag)
     {
-        currentCreaturesHealth -= damage;
-        creaturesHealthBar.SetHealth(currentCreaturesHealth);
-    }
-
-    public void EnemyTakeDamage(int damage)
-    {
-        currentEnemyHealth -= damage;
-        enemyHealthBar.SetHealth(currentEnemyHealth);
-    }
-
-    public void TrackingToggle()
-    {
-        detectPlanes = !detectPlanes;
-        _arPlaneManager.detectionMode = detectPlanes ? PlaneDetectionMode.Horizontal : PlaneDetectionMode.None;
-    }
-
-    public void PlaneToggle()
-    {
-        planesAreVisible = !planesAreVisible;
-        _arPlaneManager.planePrefab.SetActive(planesAreVisible);
+        foreach (GameObject plane in GameObject.FindGameObjectsWithTag ("plane"))
+        {
+            Renderer r = plane.GetComponent<Renderer>();
+            ARPlaneMeshVisualizer t = plane.GetComponent<ARPlaneMeshVisualizer>();
+            r.enabled = flag;
+            t.enabled = flag;
+        }
     }
 
 }

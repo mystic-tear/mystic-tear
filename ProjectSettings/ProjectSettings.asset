@@ -130,8 +130,12 @@ PlayerSettings:
     16:9: 1
     Others: 1
 <<<<<<< HEAD
+  bundleVersion: 0.78
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   bundleVersion: 0.77
+>>>>>>> master
   preloadedAssets: []
 =======
   bundleVersion: 0.75

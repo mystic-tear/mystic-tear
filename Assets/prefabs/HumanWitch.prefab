@@ -112,6 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 804348261462294613}
   - component: {fileID: 1155955102997662745}
+  - component: {fileID: 1592304738931444532}
   m_Layer: 0
   m_Name: HumanWitch
   m_TagString: good
@@ -148,7 +149,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7411d7960d6afe429448b4039ed2e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+--- !u!114 &1592304738931444532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083290273058103142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb30781cfb6e25840be54080a54e40d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 =======
+=======
+>>>>>>> master
 >>>>>>> master
 --- !u!1 &3803221797464794734
 GameObject:
