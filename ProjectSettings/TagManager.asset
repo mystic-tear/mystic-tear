@@ -6,6 +6,7 @@ TagManager:
   tags:
   - good
   - bad
+  - plane
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - background
-  - 
+  - ElfRanger
   - 
   - 
   - 

@@ -5,7 +5,6 @@ public class soHealth : ScriptableObject {
     
     private int _health;
     private int _maxHealth;
-    private bool _maxLeft;
     
     public int health
     {
@@ -15,10 +14,13 @@ public class soHealth : ScriptableObject {
 
     public int maxHealth { get; set; }
 
-    public bool maxLeft {get; set; }
-
     public void ChangeBy(int changeBy)
     {
+        if((_health += changeBy) <= 0)
+        {
+            _health = 0;
+        }
+        
         _health += changeBy;
     }
 
