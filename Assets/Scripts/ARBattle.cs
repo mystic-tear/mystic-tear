@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System.Collections;
+=======
+﻿﻿using System.Collections;
+>>>>>>> androidDebugging
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,11 +17,17 @@ public class ARBattle : MonoBehaviour
 {
     private GameObject gameObjectToInstantiate;
     private GameObject spawnedObject;
+<<<<<<< HEAD
+=======
+    private int healthAmount = 100;
+    private int enemyMaxHealth = 5000;
+>>>>>>> androidDebugging
     private int maxAllowableCreatures = 5;
     private int spawnedCreaturesCount = 0;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
     private ARPlaneManager _arPlaneManager;
+<<<<<<< HEAD
     private bool detectPlanes;
     private bool planesAreVisible;
     private Vector2 touchPosition;
@@ -33,17 +43,31 @@ public class ARBattle : MonoBehaviour
     
     
     // Start is called before the first frame update
+=======
+    //private Vector2 touchPosition;
+
+    static List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    
+    public soHealth playerHealth;
+    public soHealth enemyHealth;
+    
+>>>>>>> androidDebugging
     private void Awake()
     {
         _arPlaneManager = GetComponent<ARPlaneManager>();
         _arRaycastManager = GetComponent<ARRaycastManager>();
 
+<<<<<<< HEAD
         currentCreaturesHealth = maxCreaturesHealth;
         creaturesHealthBar.SetMaxHealth(maxCreaturesHealth);
         currentEnemyHealth = maxEnemyHealth;
         enemyHealthBar.SetMaxHealth(maxEnemyHealth);
         Debug.Log("I'm ARBattle : Awake : maxCreaturespawn =" + maxAllowableCreatures);
 
+=======
+        playerHealth.health = playerHealth.maxHealth;
+        enemyHealth.health = enemyHealth.maxHealth;
+>>>>>>> androidDebugging
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -57,7 +81,10 @@ public class ARBattle : MonoBehaviour
         return false;
     }
 
+<<<<<<< HEAD
     // Update is called once per frame
+=======
+>>>>>>> androidDebugging
     void Update()
     {
         if(!TryGetTouchPosition(out Vector2 touchPosition))
@@ -72,6 +99,14 @@ public class ARBattle : MonoBehaviour
             }
             //spawnedObject.transform.position = hitPose.position;
         }
+<<<<<<< HEAD
+=======
+
+        if(placedGameObjectsList[4] && (enemyHealth.health <= 0))
+        {
+            Destroy(placedGameObjectsList[4]);
+        }
+>>>>>>> androidDebugging
     }
     
     bool IsPointOverUIObject(Vector2 pos)
@@ -97,22 +132,31 @@ public class ARBattle : MonoBehaviour
         spawnedObject = Instantiate(gameObjectToInstantiate, hitPose.position, hitPose.rotation);
         AndroidManager.HapticFeedback();
         placedGameObjectsList.Add(spawnedObject);
+<<<<<<< HEAD
         Debug.Log("I'm ARBattle : spawnCreature : tag first =" + spawnedObject.tag);
+=======
+>>>>>>> androidDebugging
         
         spawnedCreaturesCount++;
 
         if(spawnedCreaturesCount != maxAllowableCreatures)
         {
+<<<<<<< HEAD
             maxCreaturesHealth += 100;
             currentCreaturesHealth = maxCreaturesHealth;
             creaturesHealthBar.SetMaxHealth(maxCreaturesHealth);
             creaturesHealthBar.SetHealth(currentCreaturesHealth);
 
+=======
+            playerHealth.ChangeBy(healthAmount);
+            playerHealth.maxHealth += healthAmount;
+>>>>>>> androidDebugging
         }
         
         if(spawnedCreaturesCount == maxAllowableCreatures)
         {
             spawnedObject.tag = "bad";
+<<<<<<< HEAD
             maxEnemyHealth += 100;
             currentEnemyHealth = maxEnemyHealth;
             enemyHealthBar.SetMaxHealth(maxEnemyHealth);
@@ -255,3 +299,24 @@ public class ARBattle : MonoBehaviour
     }
 }
 >>>>>>> master
+=======
+            enemyHealth.maxHealth = enemyMaxHealth;
+            enemyHealth.health = enemyHealth.maxHealth;
+            PlaneToggle(false);
+        }
+
+    }
+
+    public void PlaneToggle(bool flag)
+    {
+        foreach (GameObject plane in GameObject.FindGameObjectsWithTag ("plane"))
+        {
+            Renderer r = plane.GetComponent<Renderer>();
+            ARPlaneMeshVisualizer t = plane.GetComponent<ARPlaneMeshVisualizer>();
+            r.enabled = flag;
+            t.enabled = flag;
+        }
+    }
+
+}
+>>>>>>> androidDebugging

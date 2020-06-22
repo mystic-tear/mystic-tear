@@ -22,7 +22,10 @@ public class ARTapToPlace : MonoBehaviour
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
     private ARPlaneManager _arPlaneManager;
+<<<<<<< HEAD
     private bool detectPlanes;
+=======
+>>>>>>> androidDebugging
     private bool planesAreVisible;
     private Vector2 touchPosition;
 
@@ -64,8 +67,12 @@ public class ARTapToPlace : MonoBehaviour
 
             if(spawnedCreaturesCount == maxAllowableCreatures)
             {
+<<<<<<< HEAD
                 PlaneToggle();
                 TrackingToggle();
+=======
+                PlaneToggle(false);
+>>>>>>> androidDebugging
             }
             
             //spawnedObject.transform.position = hitPose.position;
@@ -97,6 +104,7 @@ public class ARTapToPlace : MonoBehaviour
         spawnedCreaturesCount++;
     }
 
+<<<<<<< HEAD
     public void TrackingToggle()
     {
         detectPlanes = !detectPlanes;
@@ -107,5 +115,16 @@ public class ARTapToPlace : MonoBehaviour
     {
         planesAreVisible = !planesAreVisible;
         _arPlaneManager.planePrefab.SetActive(planesAreVisible);
+=======
+    public void PlaneToggle(bool flag)
+    {
+        foreach (GameObject plane in GameObject.FindGameObjectsWithTag ("plane"))
+        {
+            Renderer r = plane.GetComponent<Renderer>();
+            ARPlaneMeshVisualizer t = plane.GetComponent<ARPlaneMeshVisualizer>();
+            r.enabled = flag;
+            t.enabled = flag;
+        }
+>>>>>>> androidDebugging
     }
 }
