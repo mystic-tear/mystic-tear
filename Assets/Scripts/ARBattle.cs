@@ -13,7 +13,7 @@ public class ARBattle : MonoBehaviour
     private GameObject gameObjectToInstantiate;
     private GameObject spawnedObject;
     private int healthAmount = 100;
-    private int enemyMaxHealth = 5000;
+    private int enemyMaxHealth = 500;
     private int maxAllowableCreatures = 5;
     private int spawnedCreaturesCount = 0;
     private List<GameObject> placedGameObjectsList = new List<GameObject>();
@@ -31,8 +31,10 @@ public class ARBattle : MonoBehaviour
         _arPlaneManager = GetComponent<ARPlaneManager>();
         _arRaycastManager = GetComponent<ARRaycastManager>();
 
-        playerHealth.health = playerHealth.maxHealth;
-        enemyHealth.health = enemyHealth.maxHealth;
+        playerHealth.Reset();
+        enemyHealth.Reset();
+        //playerHealth.health = playerHealth.maxHealth;
+        //enemyHealth.health = enemyHealth.maxHealth;
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -48,6 +50,7 @@ public class ARBattle : MonoBehaviour
 
     void Update()
     {
+
         if(!TryGetTouchPosition(out Vector2 touchPosition))
         return;
 
@@ -63,7 +66,7 @@ public class ARBattle : MonoBehaviour
 
         if(placedGameObjectsList[4] && (enemyHealth.health <= 0))
         {
-            Destroy(placedGameObjectsList[4]);
+            placedGameObjectsList[4].gameObject.SetActive(false);
         }
     }
     

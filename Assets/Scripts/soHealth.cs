@@ -16,12 +16,12 @@ public class soHealth : ScriptableObject {
 
     public void ChangeBy(int changeBy)
     {
-        if((_health += changeBy) <= 0)
+        if((health += changeBy) <= 0)
         {
-            _health = 0;
+            health = 0;
         }
         
-        _health += changeBy;
+        health += changeBy;
     }
 
     public void Reset()

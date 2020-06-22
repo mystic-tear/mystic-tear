@@ -47,6 +47,10 @@ public class Attack : MonoBehaviour
 
     void searchForTarget()
     {
+        // if(gameObject.tag == "bad")
+        // {
+        //     targets = 
+        // }
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
     }
 
@@ -56,7 +60,15 @@ public class Attack : MonoBehaviour
         {
             if(Random.Range(0, attackSuccess + 1) == attackSuccess)
             {
-                EnemyTakeDamage(attackAmount);
+                EnemyTakeDamage(attackAmount + Random.Range(0, 4));
+            }
+
+            if(gameObject.tag == "bad")
+            {
+                if(Random.Range(0, attackSuccess + 1) == attackSuccess)
+                {
+                    CreaturesTakeDamage(attackAmount + Random.Range(0, 9));
+                }
             }
 
             yield return new WaitForSeconds(1);
