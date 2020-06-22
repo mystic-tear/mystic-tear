@@ -96,7 +96,7 @@ public class ARBattle : MonoBehaviour
         
         spawnedCreaturesCount++;
 
-        if(spawnedCreaturesCount != maxAllowableCreatures)
+        if(spawnedCreaturesCount < maxAllowableCreatures)
         {
             playerHealth.ChangeBy(healthAmount);
             playerHealth.maxHealth += healthAmount;
