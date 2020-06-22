@@ -14,6 +14,20 @@ public class SignInOnClick : MonoBehaviour
         PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.Activate();
         Debug.LogFormat("SignInOnClick: Play Games Configuration initialized");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        Firebase.Auth.FirebaseAuth auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        Firebase.Auth.FirebaseUser user = auth.CurrentUser;
+        if (user != null)
+        {
+            string playerName = user.DisplayName;
+            Debug.LogFormat("Current Login User is ", playerName);
+            SceneManager.LoadScene("GalleryScene");
+        }
+=======
+>>>>>>> androidDebugging
+>>>>>>> master
     }
     string authCode;
     void SignInWithPlayGames(string sceneName)
@@ -39,6 +53,12 @@ public class SignInOnClick : MonoBehaviour
             {
                 Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
                 return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            }
+=======
+>>>>>>> master
             }
 
             Firebase.Auth.FirebaseUser user = auth.CurrentUser;
@@ -49,6 +69,10 @@ public class SignInOnClick : MonoBehaviour
                 SceneManager.LoadScene("GalleryScene");
             }
 
+<<<<<<< HEAD
+=======
+>>>>>>> androidDebugging
+>>>>>>> master
             Firebase.Auth.FirebaseUser newUser = task.Result;
             WaitFiveSeconds(sceneName);
             Debug.LogFormat("User signed in successfully: {0} ({1})",

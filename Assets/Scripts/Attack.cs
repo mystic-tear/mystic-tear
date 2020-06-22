@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,27 +18,27 @@ public class Attack : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        if(currentScene.name == "ARBattle")
+        if (currentScene.name == "ARBattle")
         {
             inBattle = true;
         }
-        
+
         playerHealth = FindObjectOfType<ARBattle>().playerHealth;
         enemyHealth = FindObjectOfType<ARBattle>().enemyHealth;
-        
+
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
 
     }
 
     void Update()
     {
-        if(inBattle)
+        if (inBattle)
         {
-            if(target == null)
+            if (target == null)
             {
                 searchForTarget();
             }
-            else 
+            else
             {
                 StartCoroutine(attackTarget());
             }
@@ -56,16 +56,16 @@ public class Attack : MonoBehaviour
 
     IEnumerator attackTarget()
     {
-        if(Vector3.Distance(transform.position, target.position) <= attackDistance)
+        if (Vector3.Distance(transform.position, target.position) <= attackDistance)
         {
-            if(Random.Range(0, attackSuccess + 1) == attackSuccess)
+            if (Random.Range(0, attackSuccess + 1) == attackSuccess)
             {
                 EnemyTakeDamage(attackAmount + Random.Range(0, 4));
             }
 
-            if(gameObject.tag == "bad")
+            if (gameObject.tag == "bad")
             {
-                if(Random.Range(0, attackSuccess + 1) == attackSuccess)
+                if (Random.Range(0, attackSuccess + 1) == attackSuccess)
                 {
                     CreaturesTakeDamage(attackAmount + Random.Range(0, 9));
                 }

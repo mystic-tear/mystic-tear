@@ -13,7 +13,15 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Mystic Tear
+<<<<<<< HEAD
+<<<<<<< HEAD
   productName: MysticTearApp
+=======
+  productName: MysticTear
+>>>>>>> master
+=======
+  productName: MysticTearApp
+>>>>>>> androidDebugging
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -121,8 +129,23 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
+<<<<<<< HEAD
+  bundleVersion: 0.78
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  bundleVersion: 0.77
+>>>>>>> master
+  preloadedAssets: []
+=======
+  bundleVersion: 0.75
+  preloadedAssets:
+  - {fileID: -5421262455654410736, guid: 0610781312a83dd4e9e9f2113a017e42, type: 2}
+>>>>>>> master
+=======
   bundleVersion: 0.78
   preloadedAssets: []
+>>>>>>> androidDebugging
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -165,7 +188,15 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+<<<<<<< HEAD
+<<<<<<< HEAD
     Android: com.MysticTear.mystictearapp
+=======
+    Android: com.MysticTear.mystictear
+>>>>>>> master
+=======
+    Android: com.MysticTear.mystictearapp
+>>>>>>> androidDebugging
     iPhone: com.MysticTear.mystictear
   buildNumber: {}
   AndroidBundleVersionCode: 1
