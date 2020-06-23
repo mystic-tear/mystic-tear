@@ -12,16 +12,19 @@ public class soHealth : ScriptableObject {
         set { _health = value; }
     }
 
-    public int maxHealth { get; set; }
+    public int maxHealth 
+    {   get { return _maxHealth; }
+        set { _maxHealth = value; } 
+    }
 
     public void ChangeBy(int changeBy)
     {
-        if((health += changeBy) <= 0)
+        health += changeBy;
+        if(_health <= 0)
         {
             health = 0;
         }
         
-        health += changeBy;
     }
 
     public void Reset()

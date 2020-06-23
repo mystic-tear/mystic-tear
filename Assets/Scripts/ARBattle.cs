@@ -16,7 +16,7 @@ public class ARBattle : MonoBehaviour
     private int enemyMaxHealth = 500;
     private int maxAllowableCreatures = 5;
     private int spawnedCreaturesCount = 0;
-    private List<GameObject> placedGameObjectsList = new List<GameObject>();
+    public List<GameObject> placedGameObjectsList = new List<GameObject>();
     private ARRaycastManager _arRaycastManager;
     private ARPlaneManager _arPlaneManager;
     //private Vector2 touchPosition;
@@ -64,10 +64,10 @@ public class ARBattle : MonoBehaviour
             //spawnedObject.transform.position = hitPose.position;
         }
 
-        if(placedGameObjectsList[4] && (enemyHealth.health <= 0))
-        {
-            placedGameObjectsList[4].gameObject.SetActive(false);
-        }
+        // if(placedGameObjectsList[4] && (enemyHealth.health <= 0))
+        // {
+        //     placedGameObjectsList[4].gameObject.SetActive(false);
+        // }
     }
     
     bool IsPointOverUIObject(Vector2 pos)
@@ -105,6 +105,7 @@ public class ARBattle : MonoBehaviour
         if(spawnedCreaturesCount == maxAllowableCreatures)
         {
             spawnedObject.tag = "bad";
+            spawnedObject.GetComponent<Rigidbody>().mass = 100000000F;
             enemyHealth.maxHealth = enemyMaxHealth;
             enemyHealth.health = enemyHealth.maxHealth;
             PlaneToggle(false);

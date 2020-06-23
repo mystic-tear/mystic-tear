@@ -16,7 +16,7 @@ public class EnemyFollow : MonoBehaviour
 
         if(rb == null) rb = GetComponent<Rigidbody>();
 
-        speed = Random.Range(2, 8);
+        speed = Random.Range(1, 6);
         target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
     }
 

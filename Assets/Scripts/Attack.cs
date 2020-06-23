@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class Attack : MonoBehaviour
 {
     private Transform target;
+    private GameObject theEnemy;
     private bool inBattle = false;
     private int attackDistance = 2;
     private int attackAmount = 1;
     private int attackSuccess = 4;
     private soHealth playerHealth;
     private soHealth enemyHealth;
+    private List<GameObject> goodGuysList;
 
     void Start()
     {
@@ -26,7 +28,9 @@ public class Attack : MonoBehaviour
         playerHealth = FindObjectOfType<ARBattle>().playerHealth;
         enemyHealth = FindObjectOfType<ARBattle>().enemyHealth;
         
-        target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
+        theEnemy = GameObject.FindGameObjectWithTag("bad");
+        target = theEnemy.GetComponent<Transform>();
+        goodGuysList = FindObjectOfType<ARBattle>().placedGameObjectsList;
     }
 
     void Update()
@@ -50,7 +54,8 @@ public class Attack : MonoBehaviour
         // {
         //     targets = 
         // }
-        target = GameObject.FindGameObjectWithTag("bad").GetComponent<Transform>();
+        theEnemy = GameObject.FindGameObjectWithTag("bad");
+        target = theEnemy.GetComponent<Transform>();
     }
 
     IEnumerator attackTarget()
@@ -59,7 +64,11 @@ public class Attack : MonoBehaviour
         {
             if(Random.Range(0, attackSuccess + 1) == attackSuccess)
             {
-                EnemyTakeDamage(attackAmount + Random.Range(0, 4));
+                EnemyTakeDamage(attackAmount + Random.Range(0, 5));
+                if(enemyHealth.health <= 0)
+                {
+                    Destroy(theEnemy);
+                }
             }
 
             if(gameObject.tag == "bad")
@@ -67,6 +76,23 @@ public class Attack : MonoBehaviour
                 if(Random.Range(0, attackSuccess + 1) == attackSuccess)
                 {
                     CreaturesTakeDamage(attackAmount + Random.Range(0, 9));
+                    
+                    if(playerHealth.health <= 0 )
+                    {
+                        Destroy(goodGuysList[3]);
+                    }
+                    else if(playerHealth.health < (playerHealth.maxHealth - 300))
+                    {
+                        Destroy(goodGuysList[2]);
+                    }
+                    else if(playerHealth.health < (playerHealth.maxHealth - 200))
+                    {
+                        Destroy(goodGuysList[1]);
+                    }
+                    else if(playerHealth.health < (playerHealth.maxHealth - 100))
+                    {
+                        Destroy(goodGuysList[0]);
+                    }
                 }
             }
 
