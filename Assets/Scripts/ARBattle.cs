@@ -64,10 +64,6 @@ public class ARBattle : MonoBehaviour
             //spawnedObject.transform.position = hitPose.position;
         }
 
-        // if(placedGameObjectsList[4] && (enemyHealth.health <= 0))
-        // {
-        //     placedGameObjectsList[4].gameObject.SetActive(false);
-        // }
     }
     
     bool IsPointOverUIObject(Vector2 pos)

@@ -29,7 +29,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5008192759090732683}
+  m_Father: {fileID: 2441523940328860788}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7708055637923572495
@@ -109,11 +109,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5008192759090732683}
+  - component: {fileID: 2441523940328860788}
   - component: {fileID: 3146453786641690460}
   - component: {fileID: 6252705837431890781}
   - component: {fileID: 2264855431065425599}
   - component: {fileID: 3136188488455751178}
+  - component: {fileID: 452387906865003906}
   m_Layer: 0
   m_Name: ElfRanger
   m_TagString: good
@@ -121,8 +122,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5008192759090732683
-Transform:
+--- !u!224 &2441523940328860788
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,6 +138,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3146453786641690460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +198,19 @@ CapsuleCollider:
   m_Height: 1.3619791
   m_Direction: 1
   m_Center: {x: 0, y: 0.58821625, z: 0}
+--- !u!114 &452387906865003906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4545066741979965358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772051da988fbef4e9a5411a4c99158a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: cf7ed47bd972947979729be47ed9fc19, type: 3}
 --- !u!1 &5487907393557386342
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +239,7 @@ Transform:
   m_LocalPosition: {x: 0.0868, y: 0.01, z: 0}
   m_LocalScale: {x: 0.21, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 5008192759090732683}
+  m_Father: {fileID: 2441523940328860788}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &1487095176108820153

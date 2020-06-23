@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2194105624643282824}
   - component: {fileID: 7477831710501588831}
   - component: {fileID: 4582571027013393745}
+  - component: {fileID: 5460030450033317705}
   m_Layer: 0
   m_Name: Ffej
   m_TagString: bad
@@ -91,6 +92,19 @@ CapsuleCollider:
   m_Height: 2.4960446
   m_Direction: 1
   m_Center: {x: 0, y: 1.0893531, z: 0}
+--- !u!114 &5460030450033317705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352629248768104814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772051da988fbef4e9a5411a4c99158a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 2dcdc4782ae6d3f47b74ad8e461e23d2, type: 3}
 --- !u!1 &7442550968710667778
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ Transform:
   m_LocalPosition: {x: -0.0264, y: 0.01, z: 0}
   m_LocalScale: {x: 0.2749881, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 7931089908924599374}
+  m_Father: {fileID: 4570487659577714775}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &5685321725196724670
@@ -89,11 +89,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7931089908924599374}
+  - component: {fileID: 4570487659577714775}
   - component: {fileID: 6696704140155787298}
   - component: {fileID: 8332320051564557764}
   - component: {fileID: 1289953267155293797}
   - component: {fileID: 7815243047200087259}
+  - component: {fileID: 8155429964448239458}
   m_Layer: 0
   m_Name: BorbHealer
   m_TagString: good
@@ -101,8 +102,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7931089908924599374
-Transform:
+--- !u!224 &4570487659577714775
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,6 +118,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6696704140155787298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +178,19 @@ CapsuleCollider:
   m_Height: 1.1961899
   m_Direction: 1
   m_Center: {x: 0, y: 0.5429689, z: 0}
+--- !u!114 &8155429964448239458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3607573612807597683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772051da988fbef4e9a5411a4c99158a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: ab8b0758c470e4b67bfec93d87c4d9b9, type: 3}
 --- !u!1 &7524849368636789353
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +220,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7931089908924599374}
+  m_Father: {fileID: 4570487659577714775}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4631107418116445587

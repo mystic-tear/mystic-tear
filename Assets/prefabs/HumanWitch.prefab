@@ -29,7 +29,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.635, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 804348261462294613}
+  m_Father: {fileID: 1972149322792908741}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4467455024505275972
@@ -109,11 +109,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 804348261462294613}
+  - component: {fileID: 1972149322792908741}
   - component: {fileID: 1155955102997662745}
   - component: {fileID: 1592304738931444532}
   - component: {fileID: 2403769710565760127}
   - component: {fileID: 2695526435224365168}
+  - component: {fileID: 8993228521805947207}
   m_Layer: 0
   m_Name: HumanWitch
   m_TagString: good
@@ -121,8 +122,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &804348261462294613
-Transform:
+--- !u!224 &1972149322792908741
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,6 +138,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1155955102997662745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +198,19 @@ CapsuleCollider:
   m_Height: 1.4143853
   m_Direction: 1
   m_Center: {x: 0, y: 0.6313666, z: 0}
+--- !u!114 &8993228521805947207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3083290273058103142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772051da988fbef4e9a5411a4c99158a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 68da9528380044f17998f775947f9eda, type: 3}
 --- !u!1 &3803221797464794734
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +239,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 0.2, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 804348261462294613}
+  m_Father: {fileID: 1972149322792908741}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &895909992823006353
