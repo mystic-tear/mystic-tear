@@ -68,6 +68,7 @@ public class Attack : MonoBehaviour
                 if(enemyHealth.health <= 0)
                 {
                     Destroy(theEnemy);
+                    inBattle = false;
                 }
             }
 
@@ -92,6 +93,7 @@ public class Attack : MonoBehaviour
                     else if(playerHealth.health < (playerHealth.maxHealth - 100))
                     {
                         Destroy(goodGuysList[0]);
+                        inBattle = false;
                     }
                 }
             }

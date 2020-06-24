@@ -17,24 +17,23 @@ public class DisplayTeam : MonoBehaviour
                 button.gameObject.SetActive(false);
             }
         }
-        else
-        {
-            for (int i = 0; i < myTeam.team.Count; i++)
-            {
-                teamButtons[i].GetComponent<Image>().sprite = myTeam.team[i].GetComponent<IconImage>().image;
-                teamButtons[i].gameObject.SetActive(true);
-            }
-        }        
     }
 
     void Update()
-    {
+    {  
         if(myTeam.team.Count != 0)
         {
-            for (int i = 0; i < myTeam.team.Count; i++)
+            for (int i = 0; i < 5; i++)
             {
-                teamButtons[i].GetComponent<Image>().sprite = myTeam.team[i].GetComponent<IconImage>().image;
-                teamButtons[i].gameObject.SetActive(true);
+                if (myTeam.team[i] == null)
+                {
+                    teamButtons[i].gameObject.SetActive(false);
+                }
+                else
+                {
+                    teamButtons[i].GetComponent<Image>().sprite = myTeam.team[i].GetComponent<IconImage>().image;
+                    teamButtons[i].gameObject.SetActive(true);
+                }
             }
         }
     }
