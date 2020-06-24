@@ -15,6 +15,8 @@ public class Attack : MonoBehaviour
     private soHealth playerHealth;
     private soHealth enemyHealth;
     private List<GameObject> goodGuysList;
+    public AudioSource audioSource;
+    public AudioClip clip;
 
     void Start()
     {
@@ -50,10 +52,6 @@ public class Attack : MonoBehaviour
 
     void searchForTarget()
     {
-        // if(gameObject.tag == "bad")
-        // {
-        //     targets = 
-        // }
         theEnemy = GameObject.FindGameObjectWithTag("bad");
         target = theEnemy.GetComponent<Transform>();
     }
@@ -65,6 +63,7 @@ public class Attack : MonoBehaviour
             if(Random.Range(0, attackSuccess + 1) == attackSuccess)
             {
                 EnemyTakeDamage(attackAmount + Random.Range(0, 5));
+                audioSource.PlayOneShot(audioSource.clip, (Random.Range(0, 6)/10));
                 if(enemyHealth.health <= 0)
                 {
                     Destroy(theEnemy);
@@ -77,10 +76,11 @@ public class Attack : MonoBehaviour
                 if(Random.Range(0, attackSuccess + 1) == attackSuccess)
                 {
                     CreaturesTakeDamage(attackAmount + Random.Range(0, 9));
-                    
+                    audioSource.PlayOneShot(audioSource.clip, (Random.Range(0, 6)/10));
                     if(playerHealth.health <= 0 )
                     {
                         Destroy(goodGuysList[3]);
+                        inBattle = false;
                     }
                     else if(playerHealth.health < (playerHealth.maxHealth - 300))
                     {
@@ -93,7 +93,6 @@ public class Attack : MonoBehaviour
                     else if(playerHealth.health < (playerHealth.maxHealth - 100))
                     {
                         Destroy(goodGuysList[0]);
-                        inBattle = false;
                     }
                 }
             }
