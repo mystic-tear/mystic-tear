@@ -10,29 +10,37 @@ public class DisplayTeam : MonoBehaviour
     
     void Start()
     {
-        if(myTeam.team.Count == 0)
-        {
-            foreach(Button button in teamButtons)
-            {
-                button.gameObject.SetActive(false);
-            }
-        }
+        myTeam.clean();
+        if(myTeam.team.Count == 0) cleanButtons();
     }
 
     void Update()
     {  
+        refreshTeam();
+    }
+
+    public void cleanButtons()
+    {
+        foreach(Button button in teamButtons)
+        {
+            button.GetComponentInParent<Canvas>().enabled = false;
+        }
+    }
+    
+    private void refreshTeam()
+    {        
         if(myTeam.team.Count != 0)
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < myTeam.team.Count; i++)
             {
-                if (myTeam.team[i] == null)
+                if (!myTeam.team[i])
                 {
-                    teamButtons[i].gameObject.SetActive(false);
+                    teamButtons[i].GetComponentInParent<Canvas>().enabled = false;
                 }
                 else
                 {
                     teamButtons[i].GetComponent<Image>().sprite = myTeam.team[i].GetComponent<IconImage>().image;
-                    teamButtons[i].gameObject.SetActive(true);
+                    teamButtons[i].GetComponentInParent<Canvas>().enabled = true;
                 }
             }
         }

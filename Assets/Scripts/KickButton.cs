@@ -12,8 +12,7 @@ public class KickButton : MonoBehaviour
         if(myTeam.team[slot])
         {
             myTeam.team.RemoveAt(slot);
-            gameObject.SetActive(false);
+            GetComponentInParent<DisplayTeam>().cleanButtons();
         }
     }
-
 }

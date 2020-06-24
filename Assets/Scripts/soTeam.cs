@@ -16,5 +16,9 @@ public class soTeam : ScriptableObject {
     {
         team.Remove(member);
     }
-}
 
+    public void clean() 
+    {
+        team.Clear();
+    }
+}
